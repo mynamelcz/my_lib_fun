@@ -1,0 +1,10123 @@
+cscope 15 $HOME\Desktop\TinyFrame-master"               0000050140
+	@TinyFrame-master/TF_Config.example.h
+
+7 #i‚de‡
+TF_CONFIG_H
+
+
+8 
+	#TF_CONFIG_H
+
+
+	)
+
+10 
+	~<°döt.h
+>
+
+11 
+	~<°dio.h
+>
+
+28 
+	#TF_ID_BYTES
+ 1
+
+	)
+
+29 
+	#TF_LEN_BYTES
+ 2
+
+	)
+
+30 
+	#TF_TYPE_BYTES
+ 1
+
+	)
+
+36 
+	#TF_CKSUM_TYPE
+ 
+TF_CKSUM_CRC16
+
+
+	)
+
+39 
+	#TF_USE_SOF_BYTE
+ 1
+
+	)
+
+41 
+	#TF_SOF_BYTE
+ 0x01
+
+	)
+
+46 
+uöt16_t
+ 
+	tTF_TICKS
+;
+
+49 
+uöt8_t
+ 
+	tTF_COUNT
+;
+
+55 
+	#TF_MAX_PAYLOAD_RX
+ 1024
+
+	)
+
+58 
+	#TF_SENDBUF_LEN
+ 128
+
+	)
+
+63 
+	#TF_MAX_ID_LST
+ 10
+
+	)
+
+65 
+	#TF_MAX_TYPE_LST
+ 10
+
+	)
+
+67 
+	#TF_MAX_GEN_LST
+ 5
+
+	)
+
+71 
+	#TF_PARSER_TIMEOUT_TICKS
+ 10
+
+	)
+
+74 
+	#TF_USE_MUTEX
+ 1
+
+	)
+
+77 
+	#TF_Eº‹
+(
+f‹m©
+, ...Ë
+	`¥ötf
+("[TF] " f‹m© "\n", ##
+__VA_ARGS__
+)
+
+	)
+
+	@TinyFrame-master/TF_Integration.example.c
+
+1 
+	~"TöyFøme.h
+"
+
+13 
+	$TF_WrôeIm∂
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àn
+)
+
+16 
+	}
+}
+
+23 
+boﬁ
+ 
+	$TF_CœimTx
+(
+TöyFøme
+ *
+tf
+)
+
+26  
+åue
+;
+
+27 
+	}
+}
+
+30 
+	$TF_Rñó£Tx
+(
+TöyFøme
+ *
+tf
+)
+
+33 
+	}
+}
+
+40 
+TF_CKSUM
+ 
+	$TF_CksumSèπ
+()
+
+43 
+	}
+}
+
+46 
+TF_CKSUM
+ 
+	$TF_CksumAdd
+(
+TF_CKSUM
+ 
+cksum
+, 
+uöt8_t
+ 
+byã
+)
+
+48  
+cksum
+ ^ 
+byã
+;
+
+49 
+	}
+}
+
+52 
+TF_CKSUM
+ 
+	$TF_CksumEnd
+(
+TF_CKSUM
+ 
+cksum
+)
+
+54  
+cksum
+;
+
+55 
+	}
+}
+
+	@TinyFrame-master/TinyFrame.c
+
+2 
+	~"TöyFøme.h
+"
+
+3 
+	~<°dlib.h
+>
+
+7 #ifde‡
+ICACHE_FLASH_ATTR
+
+
+8 
+	#_TF_FN
+ 
+ICACHE_FLASH_ATTR
+
+
+	)
+
+10 
+	#_TF_FN
+
+
+	)
+
+15 
+	#TF_MIN
+(
+a
+, 
+b
+Ë(◊)<(b)?◊):(b))
+
+	)
+
+16 
+	#TF_TRY
+(
+func
+Ëdÿ{ if(!(func)Ë 
+Ál£
+; } 0)
+
+	)
+
+20 
+	#TF_ID_MASK
+ (
+TF_ID
+)(((TF_ID)1 << ((TF_ID)*8 - 1)Ë- 1)
+
+	)
+
+21 
+	#TF_ID_PEERBIT
+ (
+TF_ID
+)((TF_ID)1 << (((TF_ID)*8Ë- 1))
+
+	)
+
+24 #i‡!
+TF_USE_MUTEX
+
+
+30 
+boﬁ
+ 
+	$TF_CœimTx
+(
+TöyFøme
+ *
+tf
+) {
+
+31 i‡(
+tf
+->
+so·_lock
+) {
+
+32 
+	`TF_Eº‹
+("TFálreadyÜocked forÅx!");
+
+33  
+Ál£
+;
+
+36 
+tf
+->
+so·_lock
+ = 
+åue
+;
+
+37  
+åue
+;
+
+38 
+	}
+}
+
+41 
+	$TF_Rñó£Tx
+(
+TöyFøme
+ *
+tf
+)
+
+43 
+tf
+->
+so·_lock
+ = 
+Ál£
+;
+
+44 
+	}
+}
+
+49 #i‡
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_NONE
+
+
+51 
+TF_CKSUM
+ 
+	$TF_CksumSèπ
+()
+
+52 {  0; 
+	}
+}
+
+54 
+TF_CKSUM
+ 
+	$TF_CksumAdd
+(
+TF_CKSUM
+ 
+cksum
+, 
+uöt8_t
+ 
+byã
+)
+
+55 {  
+cksum
+; 
+	}
+}
+
+57 
+TF_CKSUM
+ 
+	$TF_CksumEnd
+(
+TF_CKSUM
+ 
+cksum
+)
+
+58 {  
+cksum
+; 
+	}
+}
+
+60 #ñi‡
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_XOR
+
+
+62 
+TF_CKSUM
+ 
+	$TF_CksumSèπ
+()
+
+63 {  0; 
+	}
+}
+
+65 
+TF_CKSUM
+ 
+	$TF_CksumAdd
+(
+TF_CKSUM
+ 
+cksum
+, 
+uöt8_t
+ 
+byã
+)
+
+66 {  
+cksum
+ ^ 
+byã
+; 
+	}
+}
+
+68 
+TF_CKSUM
+ 
+	$TF_CksumEnd
+(
+TF_CKSUM
+ 
+cksum
+)
+
+69 {  (
+TF_CKSUM
+Ë~
+cksum
+; 
+	}
+}
+
+71 #ñi‡
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_CRC8
+
+
+73 
+ölöe
+ 
+uöt8_t
+ 
+	$¸c8_bôs
+(
+uöt8_t
+ 
+d©a
+)
+
+75 
+uöt8_t
+ 
+¸c
+ = 0;
+
+76 if(
+d©a
+ & 1Ë
+¸c
+ ^= 0x5e;
+
+77 if(
+d©a
+ & 2Ë
+¸c
+ ^= 0xbc;
+
+78 if(
+d©a
+ & 4Ë
+¸c
+ ^= 0x61;
+
+79 if(
+d©a
+ & 8Ë
+¸c
+ ^= 0xc2;
+
+80 if(
+d©a
+ & 0x10Ë
+¸c
+ ^= 0x9d;
+
+81 if(
+d©a
+ & 0x20Ë
+¸c
+ ^= 0x23;
+
+82 if(
+d©a
+ & 0x40Ë
+¸c
+ ^= 0x46;
+
+83 if(
+d©a
+ & 0x80Ë
+¸c
+ ^= 0x8c;
+
+84  
+¸c
+;
+
+85 
+	}
+}
+
+87 
+TF_CKSUM
+ 
+	$TF_CksumSèπ
+()
+
+88 {  0; 
+	}
+}
+
+90 
+TF_CKSUM
+ 
+	$TF_CksumAdd
+(
+TF_CKSUM
+ 
+cksum
+, 
+uöt8_t
+ 
+byã
+)
+
+91 {  
+	`¸c8_bôs
+(
+byã
+ ^ 
+cksum
+); 
+	}
+}
+
+93 
+TF_CKSUM
+ 
+	$TF_CksumEnd
+(
+TF_CKSUM
+ 
+cksum
+)
+
+94 {  
+cksum
+; 
+	}
+}
+
+96 #ñi‡
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_CRC16
+
+
+100 c⁄° 
+uöt16_t
+ 
+	g¸c16_èbÀ
+[256] = {
+
+135 
+TF_CKSUM
+ 
+	$TF_CksumSèπ
+()
+
+136 {  0; 
+	}
+}
+
+138 
+TF_CKSUM
+ 
+	$TF_CksumAdd
+(
+TF_CKSUM
+ 
+cksum
+, 
+uöt8_t
+ 
+byã
+)
+
+139 {  (
+cksum
+ >> 8Ë^ 
+¸c16_èbÀ
+[(cksum ^ 
+byã
+Ë& 0xff]; 
+	}
+}
+
+141 
+TF_CKSUM
+ 
+	$TF_CksumEnd
+(
+TF_CKSUM
+ 
+cksum
+)
+
+142 {  
+cksum
+; 
+	}
+}
+
+144 #ñi‡
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_CRC32
+
+
+147 c⁄° 
+uöt32_t
+ 
+	g¸c32_èbÀ
+[] = {
+
+193 
+TF_CKSUM
+ 
+	$TF_CksumSèπ
+()
+
+194 {  (
+TF_CKSUM
+)0xFFFFFFFF; 
+	}
+}
+
+196 
+TF_CKSUM
+ 
+	$TF_CksumAdd
+(
+TF_CKSUM
+ 
+cksum
+, 
+uöt8_t
+ 
+byã
+)
+
+197 {  
+¸c32_èbÀ
+[((
+cksum
+Ë^ ((
+uöt8_t
+)
+byã
+)Ë& 0xff] ^ ((cksumË>> 8); 
+	}
+}
+
+199 
+TF_CKSUM
+ 
+	$TF_CksumEnd
+(
+TF_CKSUM
+ 
+cksum
+)
+
+200 {  (
+TF_CKSUM
+Ë~
+cksum
+; 
+	}
+}
+
+204 
+	#CKSUM_RESET
+(
+cksum
+Ëdÿ{ (cksumË
+	`TF_CksumSèπ
+(); } 0)
+
+	)
+
+205 
+	#CKSUM_ADD
+(
+cksum
+, 
+byã
+Ëdÿ{ (cksumË
+	`TF_CksumAdd
+((cksum), (byã)); } 0)
+
+	)
+
+206 
+	#CKSUM_FINALIZE
+(
+cksum
+Ëdÿ{ (cksumË
+	`TF_CksumEnd
+((cksum)); } 0)
+
+	)
+
+214 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_InôSètic
+(
+TöyFøme
+ *
+tf
+, 
+TF_Pìr
+ 
+≥î_bô
+)
+
+216 i‡(
+tf
+ =
+NULL
+) {
+
+217 
+	`TF_Eº‹
+("TF_InitStatic() failed,Åf isÇull.");
+
+218  
+Ál£
+;
+
+222 
+uöt32_t
+ 
+u£πag
+ = 
+tf
+->usertag;
+
+223 * 
+u£rd©a
+ = 
+tf
+->userdata;
+
+225 
+	`mem£t
+(
+tf
+, 0, (
+TöyFøme_
+));
+
+227 
+tf
+->
+u£πag
+ = usertag;
+
+228 
+tf
+->
+u£rd©a
+ = userdata;
+
+230 
+tf
+->
+≥î_bô
+ =Öeer_bit;
+
+231  
+åue
+;
+
+232 
+	}
+}
+
+235 
+TöyFøme
+ * 
+_TF_FN
+ 
+	$TF_Inô
+(
+TF_Pìr
+ 
+≥î_bô
+)
+
+237 
+TöyFøme
+ *
+tf
+ = 
+	`mÆloc
+((TinyFrame));
+
+238 i‡(!
+tf
+) {
+
+239 
+	`TF_Eº‹
+("TF_Init() failed, out of memory.");
+
+240  
+NULL
+;
+
+243 
+	`TF_InôSètic
+(
+tf
+, 
+≥î_bô
+);
+
+244  
+tf
+;
+
+245 
+	}
+}
+
+248 
+	$TF_DeInô
+(
+TöyFøme
+ *
+tf
+)
+
+250 i‡(
+tf
+ =
+NULL
+) ;
+
+251 
+	`‰ì
+(
+tf
+);
+
+252 
+	}
+}
+
+260 
+ölöe
+ 
+_TF_FN
+ 
+	$ª√w_id_li°íî
+(
+TF_IdLi°íî_
+ *
+l°
+)
+
+262 
+l°
+->
+timeout
+ =Ü°->
+timeout_max
+;
+
+263 
+	}
+}
+
+266 
+_TF_FN
+ 
+	$˛ónup_id_li°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_COUNT
+ 
+i
+, 
+TF_IdLi°íî_
+ *
+l°
+)
+
+268 
+TF_Msg
+ 
+msg
+;
+
+269 i‡(
+l°
+->
+‚
+ =
+NULL
+) ;
+
+272 i‡(
+l°
+->
+u£rd©a
+ !
+NULL
+ ||Ü°->
+u£rd©a2
+ != NULL) {
+
+273 
+msg
+.
+u£rd©a
+ = 
+l°
+->userdata;
+
+274 
+msg
+.
+u£rd©a2
+ = 
+l°
+->userdata2;
+
+275 
+msg
+.
+d©a
+ = 
+NULL
+;
+
+276 
+l°
+->
+	`‚
+(
+tf
+, &
+msg
+);
+
+279 
+l°
+->
+‚
+ = 
+NULL
+;
+
+281 i‡(
+i
+ =
+tf
+->
+cou¡_id_l°
+ - 1) {
+
+282 
+tf
+->
+cou¡_id_l°
+--;
+
+284 
+	}
+}
+
+287 
+ölöe
+ 
+_TF_FN
+ 
+	$˛ónup_ty≥_li°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_COUNT
+ 
+i
+, 
+TF_Ty≥Li°íî_
+ *
+l°
+)
+
+289 
+l°
+->
+‚
+ = 
+NULL
+;
+
+290 i‡(
+i
+ =
+tf
+->
+cou¡_ty≥_l°
+ - 1) {
+
+291 
+tf
+->
+cou¡_ty≥_l°
+--;
+
+293 
+	}
+}
+
+296 
+ölöe
+ 
+_TF_FN
+ 
+	$˛ónup_gíîic_li°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_COUNT
+ 
+i
+, 
+TF_GíîicLi°íî_
+ *
+l°
+)
+
+298 
+l°
+->
+‚
+ = 
+NULL
+;
+
+299 i‡(
+i
+ =
+tf
+->
+cou¡_gíîic_l°
+ - 1) {
+
+300 
+tf
+->
+cou¡_gíîic_l°
+--;
+
+302 
+	}
+}
+
+305 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_AddIdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+, 
+TF_Li°íî
+ 
+cb
+, 
+TF_TICKS
+ 
+timeout
+)
+
+307 
+TF_COUNT
+ 
+i
+;
+
+308 
+TF_IdLi°íî_
+ *
+l°
+;
+
+309 
+i
+ = 0; i < 
+TF_MAX_ID_LST
+; i++) {
+
+310 
+l°
+ = &
+tf
+->
+id_li°íîs
+[
+i
+];
+
+312 i‡(
+l°
+->
+‚
+ =
+NULL
+) {
+
+313 
+l°
+->
+‚
+ = 
+cb
+;
+
+314 
+l°
+->
+id
+ = 
+msg
+->
+‰ame_id
+;
+
+315 
+l°
+->
+u£rd©a
+ = 
+msg
+->userdata;
+
+316 
+l°
+->
+u£rd©a2
+ = 
+msg
+->userdata2;
+
+317 
+l°
+->
+timeout_max
+ =Ü°->
+timeout
+ =Åimeout;
+
+318 i‡(
+i
+ >
+tf
+->
+cou¡_id_l°
+) {
+
+319 
+tf
+->
+cou¡_id_l°
+ = (
+TF_COUNT
+Ë(
+i
+ + 1);
+
+321  
+åue
+;
+
+325 
+	`TF_Eº‹
+("FailedÅoádd IDÜistener");
+
+326  
+Ál£
+;
+
+327 
+	}
+}
+
+330 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_AddTy≥Li°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+‰ame_ty≥
+, 
+TF_Li°íî
+ 
+cb
+)
+
+332 
+TF_COUNT
+ 
+i
+;
+
+333 
+TF_Ty≥Li°íî_
+ *
+l°
+;
+
+334 
+i
+ = 0; i < 
+TF_MAX_TYPE_LST
+; i++) {
+
+335 
+l°
+ = &
+tf
+->
+ty≥_li°íîs
+[
+i
+];
+
+337 i‡(
+l°
+->
+‚
+ =
+NULL
+) {
+
+338 
+l°
+->
+‚
+ = 
+cb
+;
+
+339 
+l°
+->
+ty≥
+ = 
+‰ame_ty≥
+;
+
+340 i‡(
+i
+ >
+tf
+->
+cou¡_ty≥_l°
+) {
+
+341 
+tf
+->
+cou¡_ty≥_l°
+ = (
+TF_COUNT
+Ë(
+i
+ + 1);
+
+343  
+åue
+;
+
+347 
+	`TF_Eº‹
+("FailedÅoáddÅypeÜistener");
+
+348  
+Ál£
+;
+
+349 
+	}
+}
+
+352 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_AddGíîicLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Li°íî
+ 
+cb
+)
+
+354 
+TF_COUNT
+ 
+i
+;
+
+355 
+TF_GíîicLi°íî_
+ *
+l°
+;
+
+356 
+i
+ = 0; i < 
+TF_MAX_GEN_LST
+; i++) {
+
+357 
+l°
+ = &
+tf
+->
+gíîic_li°íîs
+[
+i
+];
+
+359 i‡(
+l°
+->
+‚
+ =
+NULL
+) {
+
+360 
+l°
+->
+‚
+ = 
+cb
+;
+
+361 i‡(
+i
+ >
+tf
+->
+cou¡_gíîic_l°
+) {
+
+362 
+tf
+->
+cou¡_gíîic_l°
+ = (
+TF_COUNT
+Ë(
+i
+ + 1);
+
+364  
+åue
+;
+
+368 
+	`TF_Eº‹
+("FailedÅoádd genericÜistener");
+
+369  
+Ál£
+;
+
+370 
+	}
+}
+
+373 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_RemoveIdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_ID
+ 
+‰ame_id
+)
+
+375 
+TF_COUNT
+ 
+i
+;
+
+376 
+TF_IdLi°íî_
+ *
+l°
+;
+
+377 
+i
+ = 0; i < 
+tf
+->
+cou¡_id_l°
+; i++) {
+
+378 
+l°
+ = &
+tf
+->
+id_li°íîs
+[
+i
+];
+
+380 i‡(
+l°
+->
+‚
+ !
+NULL
+ &&Ü°->
+id
+ =
+‰ame_id
+) {
+
+381 
+	`˛ónup_id_li°íî
+(
+tf
+, 
+i
+, 
+l°
+);
+
+382  
+åue
+;
+
+386 
+	`TF_Eº‹
+("IDÜi°íî %dÅÿªmovênŸ found", ()
+‰ame_id
+);
+
+387  
+Ál£
+;
+
+388 
+	}
+}
+
+391 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_RemoveTy≥Li°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+)
+
+393 
+TF_COUNT
+ 
+i
+;
+
+394 
+TF_Ty≥Li°íî_
+ *
+l°
+;
+
+395 
+i
+ = 0; i < 
+tf
+->
+cou¡_ty≥_l°
+; i++) {
+
+396 
+l°
+ = &
+tf
+->
+ty≥_li°íîs
+[
+i
+];
+
+398 i‡(
+l°
+->
+‚
+ !
+NULL
+ &&Ü°->
+ty≥
+ ==Åype) {
+
+399 
+	`˛ónup_ty≥_li°íî
+(
+tf
+, 
+i
+, 
+l°
+);
+
+400  
+åue
+;
+
+404 
+	`TF_Eº‹
+("Ty≥Üi°íî %dÅÿªmovênŸ found", ()
+ty≥
+);
+
+405  
+Ál£
+;
+
+406 
+	}
+}
+
+409 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_RemoveGíîicLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Li°íî
+ 
+cb
+)
+
+411 
+TF_COUNT
+ 
+i
+;
+
+412 
+TF_GíîicLi°íî_
+ *
+l°
+;
+
+413 
+i
+ = 0; i < 
+tf
+->
+cou¡_gíîic_l°
+; i++) {
+
+414 
+l°
+ = &
+tf
+->
+gíîic_li°íîs
+[
+i
+];
+
+416 i‡(
+l°
+->
+‚
+ =
+cb
+) {
+
+417 
+	`˛ónup_gíîic_li°íî
+(
+tf
+, 
+i
+, 
+l°
+);
+
+418  
+åue
+;
+
+422 
+	`TF_Eº‹
+("GenericÜistenerÅoÑemoveÇot found");
+
+423  
+Ál£
+;
+
+424 
+	}
+}
+
+427 
+_TF_FN
+ 
+	$TF_H™dÀRe˚ivedMesßge
+(
+TöyFøme
+ *
+tf
+)
+
+429 
+TF_COUNT
+ 
+i
+;
+
+430 
+TF_IdLi°íî_
+ *
+û°
+;
+
+431 
+TF_Ty≥Li°íî_
+ *
+é°
+;
+
+432 
+TF_GíîicLi°íî_
+ *
+gl°
+;
+
+433 
+TF_Resu…
+ 
+ªs
+;
+
+436 
+TF_Msg
+ 
+msg
+;
+
+437 
+	`TF_CÀ¨Msg
+(&
+msg
+);
+
+438 
+msg
+.
+‰ame_id
+ = 
+tf
+->
+id
+;
+
+439 
+msg
+.
+is_ª•⁄£
+ = 
+Ál£
+;
+
+440 
+msg
+.
+ty≥
+ = 
+tf
+->type;
+
+441 
+msg
+.
+d©a
+ = 
+tf
+->data;
+
+442 
+msg
+.
+Àn
+ = 
+tf
+->len;
+
+450 
+i
+ = 0; i < 
+tf
+->
+cou¡_id_l°
+; i++) {
+
+451 
+û°
+ = &
+tf
+->
+id_li°íîs
+[
+i
+];
+
+453 i‡(
+û°
+->
+‚
+ && il°->
+id
+ =
+msg
+.
+‰ame_id
+) {
+
+454 
+msg
+.
+u£rd©a
+ = 
+û°
+->userdata;
+
+455 
+msg
+.
+u£rd©a2
+ = 
+û°
+->userdata2;
+
+456 
+ªs
+ = 
+û°
+->
+	`‚
+(
+tf
+, &
+msg
+);
+
+457 
+û°
+->
+u£rd©a
+ = 
+msg
+.userdata;
+
+458 
+û°
+->
+u£rd©a2
+ = 
+msg
+.userdata2;
+
+460 i‡(
+ªs
+ !
+TF_NEXT
+) {
+
+462 i‡(
+ªs
+ =
+TF_RENEW
+) {
+
+463 
+	`ª√w_id_li°íî
+(
+û°
+);
+
+465 i‡(
+ªs
+ =
+TF_CLOSE
+) {
+
+467 
+û°
+->
+u£rd©a
+ = 
+NULL
+;
+
+468 
+û°
+->
+u£rd©a2
+ = 
+NULL
+;
+
+469 
+	`˛ónup_id_li°íî
+(
+tf
+, 
+i
+, 
+û°
+);
+
+477 
+msg
+.
+u£rd©a
+ = 
+NULL
+;
+
+478 
+msg
+.
+u£rd©a2
+ = 
+NULL
+;
+
+481 
+i
+ = 0; i < 
+tf
+->
+cou¡_ty≥_l°
+; i++) {
+
+482 
+é°
+ = &
+tf
+->
+ty≥_li°íîs
+[
+i
+];
+
+484 i‡(
+é°
+->
+‚
+ &&Ål°->
+ty≥
+ =
+msg
+.type) {
+
+485 
+ªs
+ = 
+é°
+->
+	`‚
+(
+tf
+, &
+msg
+);
+
+487 i‡(
+ªs
+ !
+TF_NEXT
+) {
+
+491 i‡(
+ªs
+ =
+TF_CLOSE
+) {
+
+492 
+	`˛ónup_ty≥_li°íî
+(
+tf
+, 
+i
+, 
+é°
+);
+
+500 
+i
+ = 0; i < 
+tf
+->
+cou¡_gíîic_l°
+; i++) {
+
+501 
+gl°
+ = &
+tf
+->
+gíîic_li°íîs
+[
+i
+];
+
+503 i‡(
+gl°
+->
+‚
+) {
+
+504 
+ªs
+ = 
+gl°
+->
+	`‚
+(
+tf
+, &
+msg
+);
+
+506 i‡(
+ªs
+ !
+TF_NEXT
+) {
+
+514 i‡(
+ªs
+ =
+TF_CLOSE
+) {
+
+515 
+	`˛ónup_gíîic_li°íî
+(
+tf
+, 
+i
+, 
+gl°
+);
+
+522 
+	`TF_Eº‹
+("Unh™dÀd mesßge,Åy≥ %d", ()
+msg
+.
+ty≥
+);
+
+523 
+	}
+}
+
+526 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_RíewIdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_ID
+ 
+id
+)
+
+528 
+TF_COUNT
+ 
+i
+;
+
+529 
+TF_IdLi°íî_
+ *
+l°
+;
+
+530 
+i
+ = 0; i < 
+tf
+->
+cou¡_id_l°
+; i++) {
+
+531 
+l°
+ = &
+tf
+->
+id_li°íîs
+[
+i
+];
+
+533 i‡(
+l°
+->
+‚
+ !
+NULL
+ &&Ü°->
+id
+ == id) {
+
+534 
+	`ª√w_id_li°íî
+(
+l°
+);
+
+535  
+åue
+;
+
+539 
+	`TF_Eº‹
+("RíewÜi°íî:ÇŸ found (id %d)", ()
+id
+);
+
+540  
+Ál£
+;
+
+541 
+	}
+}
+
+549 
+_TF_FN
+ 
+	$TF_Ac˚±
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buf„r
+, 
+uöt32_t
+ 
+cou¡
+)
+
+551 
+uöt32_t
+ 
+i
+;
+
+552 
+i
+ = 0; i < 
+cou¡
+; i++) {
+
+553 
+	`TF_Ac˚±Ch¨
+(
+tf
+, 
+buf„r
+[
+i
+]);
+
+555 
+	}
+}
+
+558 
+_TF_FN
+ 
+	$TF_Re£tP¨£r
+(
+TöyFøme
+ *
+tf
+)
+
+560 
+tf
+->
+°©e
+ = 
+TFSèã_SOF
+;
+
+562 
+	}
+}
+
+565 
+_TF_FN
+ 
+	$∑rs_begö_‰ame
+(
+TöyFøme
+ *
+tf
+) {
+
+567 
+	`CKSUM_RESET
+(
+tf
+->
+cksum
+);
+
+568 #i‡
+TF_USE_SOF_BYTE
+
+
+569 
+	`CKSUM_ADD
+(
+tf
+->
+cksum
+, 
+TF_SOF_BYTE
+);
+
+572 
+tf
+->
+disˇrd_d©a
+ = 
+Ál£
+;
+
+575 
+tf
+->
+°©e
+ = 
+TFSèã_ID
+;
+
+576 
+tf
+->
+rxi
+ = 0;
+
+577 
+	}
+}
+
+580 
+_TF_FN
+ 
+	$TF_Ac˚±Ch¨
+(
+TöyFøme
+ *
+tf
+, 
+c
+)
+
+583 i‡(
+tf
+->
+∑r£r_timeout_ticks
+ >
+TF_PARSER_TIMEOUT_TICKS
+) {
+
+584 i‡(
+tf
+->
+°©e
+ !
+TFSèã_SOF
+) {
+
+585 
+	`TF_Re£tP¨£r
+(
+tf
+);
+
+586 
+	`TF_Eº‹
+("ParserÅimeout");
+
+589 
+tf
+->
+∑r£r_timeout_ticks
+ = 0;
+
+595 
+	#COLLECT_NUMBER
+(
+de°
+, 
+ty≥
+Ëde° = (ty≥)(((de°Ë<< 8Ë| 
+c
+); \
+
+596 i‡(++
+tf
+->
+rxi
+ =(
+ty≥
+))
+
+	)
+
+598 #i‡!
+TF_USE_SOF_BYTE
+
+
+599 i‡(
+tf
+->
+°©e
+ =
+TFSèã_SOF
+) {
+
+600 
+	`∑rs_begö_‰ame
+(
+tf
+);
+
+605 
+tf
+->
+°©e
+) {
+
+606 
+TFSèã_SOF
+:
+
+607 i‡(
+c
+ =
+TF_SOF_BYTE
+) {
+
+608 
+	`∑rs_begö_‰ame
+(
+tf
+);
+
+612 
+TFSèã_ID
+:
+
+613 
+	`CKSUM_ADD
+(
+tf
+->
+cksum
+, 
+c
+);
+
+614 
+	`COLLECT_NUMBER
+(
+tf
+->
+id
+, 
+TF_ID
+) {
+
+616 
+tf
+->
+°©e
+ = 
+TFSèã_LEN
+;
+
+617 
+tf
+->
+rxi
+ = 0;
+
+621 
+TFSèã_LEN
+:
+
+622 
+	`CKSUM_ADD
+(
+tf
+->
+cksum
+, 
+c
+);
+
+623 
+	`COLLECT_NUMBER
+(
+tf
+->
+Àn
+, 
+TF_LEN
+) {
+
+625 
+tf
+->
+°©e
+ = 
+TFSèã_TYPE
+;
+
+626 
+tf
+->
+rxi
+ = 0;
+
+630 
+TFSèã_TYPE
+:
+
+631 
+	`CKSUM_ADD
+(
+tf
+->
+cksum
+, 
+c
+);
+
+632 
+	`COLLECT_NUMBER
+(
+tf
+->
+ty≥
+, 
+TF_TYPE
+) {
+
+633 #i‡
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_NONE
+
+
+634 
+tf
+->
+°©e
+ = 
+TFSèã_DATA
+;
+
+635 
+tf
+->
+rxi
+ = 0;
+
+638 
+tf
+->
+°©e
+ = 
+TFSèã_HEAD_CKSUM
+;
+
+639 
+tf
+->
+rxi
+ = 0;
+
+640 
+tf
+->
+ªf_cksum
+ = 0;
+
+645 
+TFSèã_HEAD_CKSUM
+:
+
+646 
+	`COLLECT_NUMBER
+(
+tf
+->
+ªf_cksum
+, 
+TF_CKSUM
+) {
+
+648 
+	`CKSUM_FINALIZE
+(
+tf
+->
+cksum
+);
+
+650 i‡(
+tf
+->
+cksum
+ !tf->
+ªf_cksum
+) {
+
+651 
+	`TF_Eº‹
+("Rx head cksum mismatch");
+
+652 
+	`TF_Re£tP¨£r
+(
+tf
+);
+
+656 i‡(
+tf
+->
+Àn
+ == 0) {
+
+658 
+	`TF_H™dÀRe˚ivedMesßge
+(
+tf
+);
+
+659 
+	`TF_Re£tP¨£r
+(
+tf
+);
+
+664 
+tf
+->
+°©e
+ = 
+TFSèã_DATA
+;
+
+665 
+tf
+->
+rxi
+ = 0;
+
+667 
+	`CKSUM_RESET
+(
+tf
+->
+cksum
+);
+
+669 i‡(
+tf
+->
+Àn
+ > 
+TF_MAX_PAYLOAD_RX
+) {
+
+670 
+	`TF_Eº‹
+("RxÖaylﬂdÅoÿl⁄g: %d", ()
+tf
+->
+Àn
+);
+
+672 
+tf
+->
+disˇrd_d©a
+ = 
+åue
+;
+
+677 
+TFSèã_DATA
+:
+
+678 i‡(
+tf
+->
+disˇrd_d©a
+) {
+
+679 
+tf
+->
+rxi
+++;
+
+681 
+	`CKSUM_ADD
+(
+tf
+->
+cksum
+, 
+c
+);
+
+682 
+tf
+->
+d©a
+[tf->
+rxi
+++] = 
+c
+;
+
+685 i‡(
+tf
+->
+rxi
+ =tf->
+Àn
+) {
+
+686 #i‡
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_NONE
+
+
+688 
+	`TF_H™dÀRe˚ivedMesßge
+(
+tf
+);
+
+689 
+	`TF_Re£tP¨£r
+(
+tf
+);
+
+692 
+tf
+->
+°©e
+ = 
+TFSèã_DATA_CKSUM
+;
+
+693 
+tf
+->
+rxi
+ = 0;
+
+694 
+tf
+->
+ªf_cksum
+ = 0;
+
+699 
+TFSèã_DATA_CKSUM
+:
+
+700 
+	`COLLECT_NUMBER
+(
+tf
+->
+ªf_cksum
+, 
+TF_CKSUM
+) {
+
+702 
+	`CKSUM_FINALIZE
+(
+tf
+->
+cksum
+);
+
+703 i‡(!
+tf
+->
+disˇrd_d©a
+) {
+
+704 i‡(
+tf
+->
+cksum
+ =tf->
+ªf_cksum
+) {
+
+705 
+	`TF_H™dÀRe˚ivedMesßge
+(
+tf
+);
+
+707 
+	`TF_Eº‹
+("Body cksum mismatch");
+
+711 
+	`TF_Re£tP¨£r
+(
+tf
+);
+
+716 
+	}
+}
+
+734 
+	#WRITENUM_BASE
+(
+ty≥
+, 
+num
+, 
+xåa
+) \
+
+735 
+si
+ = (
+ty≥
+)-1; si>=0; si--) { \
+
+736 
+b
+ = (
+uöt8_t
+)((
+num
+Ë>> (
+si
+*8) & 0xFF); \
+
+737 
+outbuff
+[
+pos
+++] = 
+b
+; \
+
+738 
+xåa
+; \
+
+739 }
+
+	)
+
+744 
+	#_NOOP
+()
+
+	)
+
+752 
+	#WRITENUM
+(
+ty≥
+, 
+num
+Ë
+	`WRITENUM_BASE
+—y≥,Çum, 
+	`_NOOP
+())
+
+	)
+
+760 
+	#WRITENUM_CKSUM
+(
+ty≥
+, 
+num
+Ë
+	`WRITENUM_BASE
+—y≥,Çum, 
+	`CKSUM_ADD
+(
+cksum
+, 
+b
+))
+
+	)
+
+770 
+ölöe
+ 
+uöt32_t
+ 
+_TF_FN
+ 
+	$TF_Compo£Hód
+(
+TöyFøme
+ *
+tf
+, 
+uöt8_t
+ *
+outbuff
+, 
+TF_Msg
+ *
+msg
+)
+
+772 
+öt8_t
+ 
+si
+ = 0;
+
+773 
+uöt8_t
+ 
+b
+ = 0;
+
+774 
+TF_ID
+ 
+id
+ = 0;
+
+775 
+TF_CKSUM
+ 
+cksum
+ = 0;
+
+776 
+uöt32_t
+ 
+pos
+ = 0;
+
+778 ()
+cksum
+;
+
+780 
+	`CKSUM_RESET
+(
+cksum
+);
+
+783 i‡(
+msg
+->
+is_ª•⁄£
+) {
+
+784 
+id
+ = 
+msg
+->
+‰ame_id
+;
+
+787 
+id
+ = (
+TF_ID
+Ë(
+tf
+->
+√xt_id
+++ & 
+TF_ID_MASK
+);
+
+788 i‡(
+tf
+->
+≥î_bô
+) {
+
+789 
+id
+ |
+TF_ID_PEERBIT
+;
+
+793 
+msg
+->
+‰ame_id
+ = 
+id
+;
+
+796 
+	`CKSUM_RESET
+(
+cksum
+);
+
+798 #i‡
+TF_USE_SOF_BYTE
+
+
+799 
+outbuff
+[
+pos
+++] = 
+TF_SOF_BYTE
+;
+
+800 
+	`CKSUM_ADD
+(
+cksum
+, 
+TF_SOF_BYTE
+);
+
+803 
+	`WRITENUM_CKSUM
+(
+TF_ID
+, 
+id
+);
+
+804 
+	`WRITENUM_CKSUM
+(
+TF_LEN
+, 
+msg
+->
+Àn
+);
+
+805 
+	`WRITENUM_CKSUM
+(
+TF_TYPE
+, 
+msg
+->
+ty≥
+);
+
+807 #i‡
+TF_CKSUM_TYPE
+ !
+TF_CKSUM_NONE
+
+
+808 
+	`CKSUM_FINALIZE
+(
+cksum
+);
+
+809 
+	`WRITENUM
+(
+TF_CKSUM
+, 
+cksum
+);
+
+812  
+pos
+;
+
+813 
+	}
+}
+
+829 
+ölöe
+ 
+uöt32_t
+ 
+_TF_FN
+ 
+	$TF_Compo£Body
+(
+uöt8_t
+ *
+outbuff
+,
+
+830 c⁄° 
+uöt8_t
+ *
+d©a
+, 
+TF_LEN
+ 
+d©a_Àn
+,
+
+831 
+TF_CKSUM
+ *
+cksum
+)
+
+833 
+TF_LEN
+ 
+i
+ = 0;
+
+834 
+uöt8_t
+ 
+b
+ = 0;
+
+835 
+uöt32_t
+ 
+pos
+ = 0;
+
+837 
+i
+ = 0; i < 
+d©a_Àn
+; i++) {
+
+838 
+b
+ = 
+d©a
+[
+i
+];
+
+839 
+outbuff
+[
+pos
+++] = 
+b
+;
+
+840 
+	`CKSUM_ADD
+(*
+cksum
+, 
+b
+);
+
+843  
+pos
+;
+
+844 
+	}
+}
+
+853 
+ölöe
+ 
+uöt32_t
+ 
+_TF_FN
+ 
+	$TF_Compo£Taû
+(
+uöt8_t
+ *
+outbuff
+, 
+TF_CKSUM
+ *
+cksum
+)
+
+855 
+öt8_t
+ 
+si
+ = 0;
+
+856 
+uöt8_t
+ 
+b
+ = 0;
+
+857 
+uöt32_t
+ 
+pos
+ = 0;
+
+859 #i‡
+TF_CKSUM_TYPE
+ !
+TF_CKSUM_NONE
+
+
+860 
+	`CKSUM_FINALIZE
+(*
+cksum
+);
+
+861 
+	`WRITENUM
+(
+TF_CKSUM
+, *
+cksum
+);
+
+863  
+pos
+;
+
+864 
+	}
+}
+
+875 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_SídFøme_Begö
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+)
+
+877 
+	`TF_TRY
+(
+	`TF_CœimTx
+(
+tf
+));
+
+879 
+tf
+->
+tx_pos
+ = (
+uöt32_t
+Ë
+	`TF_Compo£Hód
+—f,Åf->
+£ndbuf
+, 
+msg
+);
+
+880 
+tf
+->
+tx_Àn
+ = 
+msg
+->
+Àn
+;
+
+882 i‡(
+li°íî
+) {
+
+883 
+	`TF_TRY
+(
+	`TF_AddIdLi°íî
+(
+tf
+, 
+msg
+, 
+li°íî
+, 
+timeout
+));
+
+886 
+	`CKSUM_RESET
+(
+tf
+->
+tx_cksum
+);
+
+887  
+åue
+;
+
+888 
+	}
+}
+
+898 
+_TF_FN
+ 
+	$TF_SídFøme_Chunk
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àngth
+)
+
+900 
+uöt32_t
+ 
+ªmaö
+;
+
+901 
+uöt32_t
+ 
+chunk
+;
+
+902 
+uöt32_t
+ 
+£¡
+ = 0;
+
+904 
+ªmaö
+ = 
+Àngth
+;
+
+905 
+ªmaö
+ > 0) {
+
+907 
+chunk
+ = 
+	`TF_MIN
+(
+TF_SENDBUF_LEN
+ - 
+tf
+->
+tx_pos
+, 
+ªmaö
+);
+
+908 
+tf
+->
+tx_pos
+ +
+	`TF_Compo£Body
+—f->
+£ndbuf
++tf->tx_pos, 
+buff
++
+£¡
+, (
+TF_LEN
+Ë
+chunk
+, &tf->
+tx_cksum
+);
+
+909 
+ªmaö
+ -
+chunk
+;
+
+910 
+£¡
+ +
+chunk
+;
+
+913 i‡(
+tf
+->
+tx_pos
+ =
+TF_SENDBUF_LEN
+) {
+
+914 
+	`TF_WrôeIm∂
+(
+tf
+, (c⁄° 
+uöt8_t
+ *Ëtf->
+£ndbuf
+,Åf->
+tx_pos
+);
+
+915 
+tf
+->
+tx_pos
+ = 0;
+
+918 
+	}
+}
+
+925 
+_TF_FN
+ 
+	$TF_SídFøme_End
+(
+TöyFøme
+ *
+tf
+)
+
+928 i‡(
+tf
+->
+tx_Àn
+ > 0) {
+
+930 i‡(
+TF_SENDBUF_LEN
+ - 
+tf
+->
+tx_pos
+ < (
+TF_CKSUM
+)) {
+
+931 
+	`TF_WrôeIm∂
+(
+tf
+, (c⁄° 
+uöt8_t
+ *Ëtf->
+£ndbuf
+,Åf->
+tx_pos
+);
+
+932 
+tf
+->
+tx_pos
+ = 0;
+
+936 
+tf
+->
+tx_pos
+ +
+	`TF_Compo£Taû
+—f->
+£ndbuf
+ +Åf->tx_pos, &tf->
+tx_cksum
+);
+
+939 
+	`TF_WrôeIm∂
+(
+tf
+, (c⁄° 
+uöt8_t
+ *Ëtf->
+£ndbuf
+,Åf->
+tx_pos
+);
+
+940 
+	`TF_Rñó£Tx
+(
+tf
+);
+
+941 
+	}
+}
+
+952 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_SídFøme
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+)
+
+954 
+	`TF_TRY
+(
+	`TF_SídFøme_Begö
+(
+tf
+, 
+msg
+, 
+li°íî
+, 
+timeout
+));
+
+955 i‡(
+msg
+->
+Àn
+ =0 || msg->
+d©a
+ !
+NULL
+) {
+
+959 
+	`TF_SídFøme_Chunk
+(
+tf
+, 
+msg
+->
+d©a
+, msg->
+Àn
+);
+
+960 
+	`TF_SídFøme_End
+(
+tf
+);
+
+962  
+åue
+;
+
+963 
+	}
+}
+
+971 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_Síd
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+973  
+	`TF_SídFøme
+(
+tf
+, 
+msg
+, 
+NULL
+, 0);
+
+974 
+	}
+}
+
+977 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_SídSim∂e
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+, c⁄° 
+uöt8_t
+ *
+d©a
+, 
+TF_LEN
+ 
+Àn
+)
+
+979 
+TF_Msg
+ 
+msg
+;
+
+980 
+	`TF_CÀ¨Msg
+(&
+msg
+);
+
+981 
+msg
+.
+ty≥
+ =Åype;
+
+982 
+msg
+.
+d©a
+ = data;
+
+983 
+msg
+.
+Àn
+ =Üen;
+
+984  
+	`TF_Síd
+(
+tf
+, &
+msg
+);
+
+985 
+	}
+}
+
+988 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_QuîySim∂e
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+, c⁄° 
+uöt8_t
+ *
+d©a
+, 
+TF_LEN
+ 
+Àn
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+)
+
+990 
+TF_Msg
+ 
+msg
+;
+
+991 
+	`TF_CÀ¨Msg
+(&
+msg
+);
+
+992 
+msg
+.
+ty≥
+ =Åype;
+
+993 
+msg
+.
+d©a
+ = data;
+
+994 
+msg
+.
+Àn
+ =Üen;
+
+995  
+	`TF_SídFøme
+(
+tf
+, &
+msg
+, 
+li°íî
+, 
+timeout
+);
+
+996 
+	}
+}
+
+999 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_Quîy
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+)
+
+1001  
+	`TF_SídFøme
+(
+tf
+, 
+msg
+, 
+li°íî
+, 
+timeout
+);
+
+1002 
+	}
+}
+
+1005 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_Re•⁄d
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+1007 
+msg
+->
+is_ª•⁄£
+ = 
+åue
+;
+
+1008  
+	`TF_Síd
+(
+tf
+, 
+msg
+);
+
+1009 
+	}
+}
+
+1016 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_Síd_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+1018 
+msg
+->
+d©a
+ = 
+NULL
+;
+
+1019  
+	`TF_Síd
+(
+tf
+, 
+msg
+);
+
+1020 
+	}
+}
+
+1022 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_SídSim∂e_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+, 
+TF_LEN
+ 
+Àn
+)
+
+1024  
+	`TF_SídSim∂e
+(
+tf
+, 
+ty≥
+, 
+NULL
+, 
+Àn
+);
+
+1025 
+	}
+}
+
+1027 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_QuîySim∂e_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+, 
+TF_LEN
+ 
+Àn
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+)
+
+1029  
+	`TF_QuîySim∂e
+(
+tf
+, 
+ty≥
+, 
+NULL
+, 
+Àn
+, 
+li°íî
+, 
+timeout
+);
+
+1030 
+	}
+}
+
+1032 
+boﬁ
+ 
+_TF_FN
+ 
+	$TF_Quîy_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+)
+
+1034 
+msg
+->
+d©a
+ = 
+NULL
+;
+
+1035  
+	`TF_Quîy
+(
+tf
+, 
+msg
+, 
+li°íî
+, 
+timeout
+);
+
+1036 
+	}
+}
+
+1038 
+_TF_FN
+ 
+	$TF_Re•⁄d_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+1040 
+msg
+->
+d©a
+ = 
+NULL
+;
+
+1041 
+	`TF_Re•⁄d
+(
+tf
+, 
+msg
+);
+
+1042 
+	}
+}
+
+1044 
+_TF_FN
+ 
+	$TF_Mu…ù¨t_Paylﬂd
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àngth
+)
+
+1046 
+	`TF_SídFøme_Chunk
+(
+tf
+, 
+buff
+, 
+Àngth
+);
+
+1047 
+	}
+}
+
+1049 
+_TF_FN
+ 
+	$TF_Mu…ù¨t_Clo£
+(
+TöyFøme
+ *
+tf
+)
+
+1051 
+	`TF_SídFøme_End
+(
+tf
+);
+
+1052 
+	}
+}
+
+1058 
+_TF_FN
+ 
+	$TF_Tick
+(
+TöyFøme
+ *
+tf
+)
+
+1060 
+TF_COUNT
+ 
+i
+;
+
+1061 
+TF_IdLi°íî_
+ *
+l°
+;
+
+1064 i‡(
+tf
+->
+∑r£r_timeout_ticks
+ < 
+TF_PARSER_TIMEOUT_TICKS
+) {
+
+1065 
+tf
+->
+∑r£r_timeout_ticks
+++;
+
+1069 
+i
+ = 0; i < 
+tf
+->
+cou¡_id_l°
+; i++) {
+
+1070 
+l°
+ = &
+tf
+->
+id_li°íîs
+[
+i
+];
+
+1071 i‡(!
+l°
+->
+‚
+ ||Ü°->
+timeout
+ == 0) ;
+
+1073 i‡(--
+l°
+->
+timeout
+ == 0) {
+
+1074 
+	`TF_Eº‹
+("IDÜi°íî %d ha†expúed", ()
+l°
+->
+id
+);
+
+1076 
+	`˛ónup_id_li°íî
+(
+tf
+, 
+i
+, 
+l°
+);
+
+1079 
+	}
+}
+
+	@TinyFrame-master/TinyFrame.h
+
+1 #i‚de‡
+TöyFømeH
+
+
+2 
+	#TöyFømeH
+
+
+	)
+
+13 
+	#TF_VERSION
+ "2.3.0"
+
+	)
+
+16 
+	~<°döt.h
+>
+
+17 
+	~<°dboﬁ.h
+>
+
+18 
+	~<°ddef.h
+>
+
+19 
+	~<°rög.h
+>
+
+23 
+	#TF_CKSUM_NONE
+ 0
+
+24 
+	#TF_CKSUM_XOR
+ 8
+
+25 
+	#TF_CKSUM_CRC8
+ 9
+
+26 
+	#TF_CKSUM_CRC16
+ 16
+
+27 
+	#TF_CKSUM_CRC32
+ 32
+
+28 
+	#TF_CKSUM_CUSTOM8
+ 1
+
+29 
+	#TF_CKSUM_CUSTOM16
+ 2
+
+30 
+	#TF_CKSUM_CUSTOM32
+ 3
+
+31 
+
+	)
+
+32 
+	~"TF_C⁄fig.h
+"
+
+36 #i‡
+TF_LEN_BYTES
+ == 1
+
+37 
+uöt8_t
+ 
+	tTF_LEN
+;
+
+38 #ñi‡
+TF_LEN_BYTES
+ == 2
+
+39 
+uöt16_t
+ 
+	tTF_LEN
+;
+
+40 #ñi‡
+TF_LEN_BYTES
+ == 4
+
+41 
+uöt32_t
+ 
+	tTF_LEN
+;
+
+43 #îr‹ 
+Bad
+ 
+vÆue
+ 
+of
+ 
+TF_LEN_BYTES
+, 
+mu°
+ 
+be
+ 1, 2 
+‹
+ 4
+
+47 #i‡
+TF_TYPE_BYTES
+ == 1
+
+48 
+uöt8_t
+ 
+	tTF_TYPE
+;
+
+49 #ñi‡
+TF_TYPE_BYTES
+ == 2
+
+50 
+uöt16_t
+ 
+	tTF_TYPE
+;
+
+51 #ñi‡
+TF_TYPE_BYTES
+ == 4
+
+52 
+uöt32_t
+ 
+	tTF_TYPE
+;
+
+54 #îr‹ 
+Bad
+ 
+vÆue
+ 
+of
+ 
+TF_TYPE_BYTES
+, 
+mu°
+ 
+be
+ 1, 2 
+‹
+ 4
+
+58 #i‡
+TF_ID_BYTES
+ == 1
+
+59 
+uöt8_t
+ 
+	tTF_ID
+;
+
+60 #ñi‡
+TF_ID_BYTES
+ == 2
+
+61 
+uöt16_t
+ 
+	tTF_ID
+;
+
+62 #ñi‡
+TF_ID_BYTES
+ == 4
+
+63 
+uöt32_t
+ 
+	tTF_ID
+;
+
+65 #îr‹ 
+Bad
+ 
+vÆue
+ 
+of
+ 
+TF_ID_BYTES
+, 
+mu°
+ 
+be
+ 1, 2 
+‹
+ 4
+
+69 #i‡(
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_XOR
+Ë|| (TF_CKSUM_TYPE =
+TF_CKSUM_NONE
+Ë|| (TF_CKSUM_TYPE =
+TF_CKSUM_CUSTOM8
+Ë|| (TF_CKSUM_TYPE =
+TF_CKSUM_CRC8
+)
+
+71 
+uöt8_t
+ 
+	tTF_CKSUM
+;
+
+72 #ñi‡(
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_CRC16
+Ë|| (TF_CKSUM_TYPE =
+TF_CKSUM_CUSTOM16
+)
+
+74 
+uöt16_t
+ 
+	tTF_CKSUM
+;
+
+75 #ñi‡(
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_CRC32
+Ë|| (TF_CKSUM_TYPE =
+TF_CKSUM_CUSTOM32
+)
+
+77 
+uöt32_t
+ 
+	tTF_CKSUM
+;
+
+79 #îr‹ 
+Bad
+ 
+vÆue
+ 
+TF_CKSUM_TYPE
+
+
+88 
+	mTF_SLAVE
+ = 0,
+
+89 
+	mTF_MASTER
+ = 1,
+
+90 } 
+	tTF_Pìr
+;
+
+95 
+	mTF_NEXT
+ = 0,
+
+96 
+	mTF_STAY
+ = 1,
+
+97 
+	mTF_RENEW
+ = 2,
+
+98 
+	mTF_CLOSE
+ = 3,
+
+99 } 
+	tTF_Resu…
+;
+
+103 
+	sTF_Msg_
+ {
+
+104 
+TF_ID
+ 
+	m‰ame_id
+;
+
+105 
+boﬁ
+ 
+	mis_ª•⁄£
+;
+
+106 
+TF_TYPE
+ 
+	mty≥
+;
+
+117 c⁄° 
+uöt8_t
+ *
+	md©a
+;
+
+118 
+TF_LEN
+ 
+	mÀn
+;
+
+126 *
+	mu£rd©a
+;
+
+127 *
+	mu£rd©a2
+;
+
+128 } 
+	tTF_Msg
+;
+
+135 
+ölöe
+ 
+	$TF_CÀ¨Msg
+(
+TF_Msg
+ *
+msg
+)
+
+137 
+	`mem£t
+(
+msg
+, 0, (
+TF_Msg
+));
+
+138 
+	}
+}
+
+141 
+TöyFøme_
+ 
+	tTöyFøme
+;
+
+150 
+	$TF_Resu…
+ (*
+	tTF_Li°íî
+)(
+	tTöyFøme
+ *
+	ttf
+, 
+	tTF_Msg
+ *
+	tmsg
+);
+
+169 
+TöyFøme
+ *
+	`TF_Inô
+(
+TF_Pìr
+ 
+≥î_bô
+);
+
+181 
+boﬁ
+ 
+	`TF_InôSètic
+(
+TöyFøme
+ *
+tf
+, 
+TF_Pìr
+ 
+≥î_bô
+);
+
+188 
+	`TF_DeInô
+(
+TöyFøme
+ *
+tf
+);
+
+200 
+	`TF_Ac˚±
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buf„r
+, 
+uöt32_t
+ 
+cou¡
+);
+
+208 
+	`TF_Ac˚±Ch¨
+(
+TöyFøme
+ *
+tf
+, 
+uöt8_t
+ 
+c
+);
+
+220 
+	`TF_Tick
+(
+TöyFøme
+ *
+tf
+);
+
+228 
+	`TF_Re£tP¨£r
+(
+TöyFøme
+ *
+tf
+);
+
+242 
+boﬁ
+ 
+	`TF_AddIdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+, 
+TF_Li°íî
+ 
+cb
+, 
+TF_TICKS
+ 
+timeout
+);
+
+250 
+boﬁ
+ 
+	`TF_RemoveIdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_ID
+ 
+‰ame_id
+);
+
+260 
+boﬁ
+ 
+	`TF_AddTy≥Li°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+‰ame_ty≥
+, 
+TF_Li°íî
+ 
+cb
+);
+
+268 
+boﬁ
+ 
+	`TF_RemoveTy≥Li°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+);
+
+277 
+boﬁ
+ 
+	`TF_AddGíîicLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Li°íî
+ 
+cb
+);
+
+285 
+boﬁ
+ 
+	`TF_RemoveGíîicLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Li°íî
+ 
+cb
+);
+
+294 
+boﬁ
+ 
+	`TF_RíewIdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_ID
+ 
+id
+);
+
+306 
+boﬁ
+ 
+	`TF_Síd
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+);
+
+311 
+boﬁ
+ 
+	`TF_SídSim∂e
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+, c⁄° 
+uöt8_t
+ *
+d©a
+, 
+TF_LEN
+ 
+Àn
+);
+
+322 
+boﬁ
+ 
+	`TF_Quîy
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+,
+
+323 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+);
+
+328 
+boﬁ
+ 
+	`TF_QuîySim∂e
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+,
+
+329 c⁄° 
+uöt8_t
+ *
+d©a
+, 
+TF_LEN
+ 
+Àn
+,
+
+330 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+);
+
+339 
+boﬁ
+ 
+	`TF_Re•⁄d
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+);
+
+350 
+boﬁ
+ 
+	`TF_Síd_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+);
+
+355 
+boﬁ
+ 
+	`TF_SídSim∂e_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+, 
+TF_LEN
+ 
+Àn
+);
+
+360 
+boﬁ
+ 
+	`TF_QuîySim∂e_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_TYPE
+ 
+ty≥
+, 
+TF_LEN
+ 
+Àn
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+);
+
+366 
+boﬁ
+ 
+	`TF_Quîy_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+, 
+TF_Li°íî
+ 
+li°íî
+, 
+TF_TICKS
+ 
+timeout
+);
+
+372 
+	`TF_Re•⁄d_Mu…ù¨t
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+);
+
+382 
+	`TF_Mu…ù¨t_Paylﬂd
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àngth
+);
+
+389 
+	`TF_Mu…ù¨t_Clo£
+(
+TöyFøme
+ *
+tf
+);
+
+395 
+	eTF_Sèã_
+ {
+
+396 
+TFSèã_SOF
+ = 0,
+
+397 
+TFSèã_LEN
+,
+
+398 
+TFSèã_HEAD_CKSUM
+,
+
+399 
+TFSèã_ID
+,
+
+400 
+TFSèã_TYPE
+,
+
+401 
+TFSèã_DATA
+,
+
+402 
+TFSèã_DATA_CKSUM
+
+
+405 
+	sTF_IdLi°íî_
+ {
+
+406 
+TF_ID
+ 
+id
+;
+
+407 
+TF_Li°íî
+ 
+‚
+;
+
+408 
+TF_TICKS
+ 
+timeout
+;
+
+409 
+TF_TICKS
+ 
+timeout_max
+;
+
+410 *
+u£rd©a
+;
+
+411 *
+u£rd©a2
+;
+
+414 
+	sTF_Ty≥Li°íî_
+ {
+
+415 
+TF_TYPE
+ 
+ty≥
+;
+
+416 
+TF_Li°íî
+ 
+‚
+;
+
+419 
+	sTF_GíîicLi°íî_
+ {
+
+420 
+TF_Li°íî
+ 
+‚
+;
+
+426 
+	sTöyFøme_
+ {
+
+428 *
+u£rd©a
+;
+
+429 
+uöt32_t
+ 
+u£πag
+;
+
+434 
+TF_Pìr
+ 
+≥î_bô
+;
+
+435 
+TF_ID
+ 
+√xt_id
+;
+
+438 
+TF_Sèã_
+ 
+°©e
+;
+
+439 
+TF_TICKS
+ 
+∑r£r_timeout_ticks
+;
+
+440 
+TF_ID
+ 
+id
+;
+
+441 
+TF_LEN
+ 
+Àn
+;
+
+442 
+uöt8_t
+ 
+d©a
+[
+TF_MAX_PAYLOAD_RX
+];
+
+443 
+TF_LEN
+ 
+rxi
+;
+
+444 
+TF_CKSUM
+ 
+cksum
+;
+
+445 
+TF_CKSUM
+ 
+ªf_cksum
+;
+
+446 
+TF_TYPE
+ 
+ty≥
+;
+
+447 
+boﬁ
+ 
+disˇrd_d©a
+;
+
+451 
+uöt8_t
+ 
+£ndbuf
+[
+TF_SENDBUF_LEN
+];
+
+453 
+uöt32_t
+ 
+tx_pos
+;
+
+454 
+uöt32_t
+ 
+tx_Àn
+;
+
+455 
+TF_CKSUM
+ 
+tx_cksum
+;
+
+457 #i‡!
+TF_USE_MUTEX
+
+
+458 
+boﬁ
+ 
+so·_lock
+;
+
+464 
+TF_IdLi°íî_
+ 
+id_li°íîs
+[
+TF_MAX_ID_LST
+];
+
+465 
+TF_Ty≥Li°íî_
+ 
+ty≥_li°íîs
+[
+TF_MAX_TYPE_LST
+];
+
+466 
+TF_GíîicLi°íî_
+ 
+gíîic_li°íîs
+[
+TF_MAX_GEN_LST
+];
+
+471 
+TF_COUNT
+ 
+cou¡_id_l°
+;
+
+472 
+TF_COUNT
+ 
+cou¡_ty≥_l°
+;
+
+473 
+TF_COUNT
+ 
+cou¡_gíîic_l°
+;
+
+484 
+	`TF_WrôeIm∂
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àn
+);
+
+487 #i‡
+TF_USE_MUTEX
+
+
+490 
+boﬁ
+ 
+	`TF_CœimTx
+(
+TöyFøme
+ *
+tf
+);
+
+493 
+	`TF_Rñó£Tx
+(
+TöyFøme
+ *
+tf
+);
+
+498 #i‡(
+TF_CKSUM_TYPE
+ =
+TF_CKSUM_CUSTOM8
+Ë|| (TF_CKSUM_TYPE =
+TF_CKSUM_CUSTOM16
+Ë|| (TF_CKSUM_TYPE =
+TF_CKSUM_CUSTOM32
+)
+
+505 
+TF_CKSUM
+ 
+	`TF_CksumSèπ
+();
+
+514 
+TF_CKSUM
+ 
+	`TF_CksumAdd
+(TF_CKSUM 
+cksum
+, 
+uöt8_t
+ 
+byã
+);
+
+522 
+TF_CKSUM
+ 
+	`TF_CksumEnd
+(TF_CKSUM 
+cksum
+);
+
+	@TinyFrame-master/demo/demo.c
+
+5 
+	~"demo.h
+"
+
+8 
+	#_GNU_SOURCE
+
+
+	)
+
+9 
+	#__USE_GNU
+
+
+	)
+
+11 
+	~<sched.h
+>
+
+13 
+	~<uni°d.h
+>
+
+14 
+	~<sys/sockë.h
+>
+
+15 
+	~<√töë/ö.h
+>
+
+16 
+	~<°rög.h
+>
+
+17 
+	~<¨∑/öë.h
+>
+
+18 
+	~<sig«l.h
+>
+
+19 
+	~<mÆloc.h
+>
+
+20 
+	~<°dlib.h
+>
+
+22 vﬁ©ûê
+	gsockfd
+ = -1;
+
+23 vﬁ©ûê
+boﬁ
+ 
+	gc⁄n_disb™d
+ = 
+Ál£
+;
+
+25 
+TöyFøme
+ *
+	gdemo_tf
+;
+
+30 
+	$demo_disc⁄n
+()
+
+32 
+c⁄n_disb™d
+ = 
+åue
+;
+
+33 i‡(
+sockfd
+ >0Ë
+	`˛o£
+(sockfd);
+
+34 
+	}
+}
+
+42 
+	$TF_WrôeIm∂
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àn
+)
+
+44 
+	`¥ötf
+("\033[32mTF_WriteImpl - sending frame:\033[0m\n");
+
+45 
+	`dumpFøme
+(
+buff
+, 
+Àn
+);
+
+46 
+	`u¶ìp
+(1000);
+
+48 i‡(
+sockfd
+ != -1) {
+
+49 
+	`wrôe
+(
+sockfd
+, 
+buff
+, 
+Àn
+);
+
+52 
+	`¥ötf
+("\nNoÖeer!\n");
+
+54 
+	}
+}
+
+63 
+	$demo_˛õ¡
+(*
+unu£d
+)
+
+65 (Ë
+unu£d
+;
+
+67 
+ssize_t
+ 
+n
+ = 0;
+
+68 
+uöt8_t
+ 
+ªcvBuff
+[1024];
+
+69 
+sockaddr_ö
+ 
+£rv_addr
+;
+
+71 
+	`¥ötf
+("\n--- STARTING CLIENT! ---\n");
+
+73 
+	`mem£t
+(
+ªcvBuff
+, '0', (recvBuff));
+
+74 i‡((
+sockfd
+ = 
+	`sockë
+(
+AF_INET
+, 
+SOCK_STREAM
+, 0)) < 0) {
+
+75 
+	`¥ötf
+("\n Error : CouldÇot create socket \n");
+
+76  
+Ál£
+;
+
+79 
+	`mem£t
+(&
+£rv_addr
+, '0', (serv_addr));
+
+81 
+£rv_addr
+.
+sö_Ámûy
+ = 
+AF_INET
+;
+
+82 
+£rv_addr
+.
+sö_p‹t
+ = 
+	`ht⁄s
+(
+PORT
+);
+
+84 i‡(
+	`öë_±⁄
+(
+AF_INET
+, "127.0.0.1", &
+£rv_addr
+.
+sö_addr
+) <= 0) {
+
+85 
+	`¥ötf
+("\n inet_ptonÉrror occured\n");
+
+86  
+Ál£
+;
+
+89 i‡(
+	`c⁄√˘
+(
+sockfd
+, (
+sockaddr
+ *Ë&
+£rv_addr
+, (serv_addr)) < 0) {
+
+90 
+	`¥ötf
+("\n Error : Connect Failed \n");
+
+91 
+	`≥º‹
+("PERROR ");
+
+92  
+Ál£
+;
+
+95 
+	`¥ötf
+("\n Child Process \n");
+
+97 (
+n
+ = 
+	`ªad
+(
+sockfd
+, 
+ªcvBuff
+, (recvBuff) - 1)) > 0) {
+
+98 
+	`¥ötf
+("\033[36m--- RX %ld byã†---\033[0m\n", 
+n
+);
+
+99 
+	`dumpFøme
+(
+ªcvBuff
+, (
+size_t
+Ë
+n
+);
+
+100 
+	`TF_Ac˚±
+(
+demo_tf
+, 
+ªcvBuff
+, (
+size_t
+Ë
+n
+);
+
+103 
+	}
+}
+
+111 
+	$demo_£rvî
+(*
+unu£d
+)
+
+113 (Ë
+unu£d
+;
+
+114 
+ssize_t
+ 
+n
+;
+
+115 
+li°ífd
+ = 0;
+
+116 
+uöt8_t
+ 
+ªcvBuff
+[1024];
+
+117 
+sockaddr_ö
+ 
+£rv_addr
+;
+
+118 
+›ti⁄
+;
+
+120 
+	`¥ötf
+("\n--- STARTING SERVER! ---\n");
+
+122 
+li°ífd
+ = 
+	`sockë
+(
+AF_INET
+, 
+SOCK_STREAM
+, 0);
+
+123 
+	`mem£t
+(&
+£rv_addr
+, '0', (serv_addr));
+
+125 
+›ti⁄
+ = 1;
+
+126 
+	`£tsock›t
+(
+li°ífd
+, 
+SOL_SOCKET
+, 
+SO_REUSEADDR
+, (*Ë&
+›ti⁄
+, (option));
+
+128 
+£rv_addr
+.
+sö_Ámûy
+ = 
+AF_INET
+;
+
+129 
+£rv_addr
+.
+sö_addr
+.
+s_addr
+ = 
+	`ht⁄l
+(
+INADDR_ANY
+);
+
+130 
+£rv_addr
+.
+sö_p‹t
+ = 
+	`ht⁄s
+(
+PORT
+);
+
+132 i‡(
+	`böd
+(
+li°ífd
+, (
+sockaddr
+ *Ë&
+£rv_addr
+, (serv_addr)) < 0) {
+
+133 
+	`≥º‹
+("FailedÅo bind");
+
+137 i‡(
+	`li°í
+(
+li°ífd
+, 10) < 0) {
+
+138 
+	`≥º‹
+("FailedÅoÜisten");
+
+143 
+	`¥ötf
+("\nWaiting for client...\n");
+
+144 
+sockfd
+ = 
+	`ac˚±
+(
+li°ífd
+, (
+sockaddr
+ *Ë
+NULL
+, NULL);
+
+145 
+	`£tsock›t
+(
+sockfd
+, 
+SOL_SOCKET
+, 
+SO_REUSEADDR
+, (*Ë&
+›ti⁄
+, (option));
+
+146 
+	`¥ötf
+("\nClient connected\n");
+
+147 
+c⁄n_disb™d
+ = 
+Ál£
+;
+
+149 (
+n
+ = 
+	`ªad
+(
+sockfd
+, 
+ªcvBuff
+, ‘ecvBuffË- 1)Ë> 0 && !
+c⁄n_disb™d
+) {
+
+150 
+	`¥ötf
+("\033[36m--- RX %ld byã†---\033[0m\n", 
+n
+);
+
+151 
+	`dumpFøme
+(
+ªcvBuff
+, 
+n
+);
+
+152 
+	`TF_Ac˚±
+(
+demo_tf
+, 
+ªcvBuff
+, (
+size_t
+Ë
+n
+);
+
+155 i‡(
+n
+ < 0) {
+
+156 
+	`¥ötf
+("\n ReadÉrror \n");
+
+159 
+	`¥ötf
+("Closing socket\n");
+
+160 
+	`˛o£
+(
+sockfd
+);
+
+161 
+sockfd
+ = -1;
+
+164 
+	}
+}
+
+171 
+	$sig«l_h™dÀr
+(
+sig
+)
+
+173 (Ë
+sig
+;
+
+174 
+	`¥ötf
+("Shutting down...");
+
+175 
+	`demo_disc⁄n
+();
+
+177 
+	`exô
+(
+sig
+);
+
+178 
+	}
+}
+
+183 
+	$demo_¶ìp
+()
+
+185 1Ë
+	`u¶ìp
+(10);
+
+186 
+	}
+}
+
+195 
+	$demo_öô
+(
+TF_Pìr
+ 
+≥î
+)
+
+197 
+	`sig«l
+(
+SIGTERM
+, 
+sig«l_h™dÀr
+);
+
+198 
+	`sig«l
+(
+SIGINT
+, 
+sig«l_h™dÀr
+);
+
+200 
+ªtc
+;
+
+201 *
+°ack
+ = 
+	`mÆloc
+(8192);
+
+202 i‡(
+°ack
+ =
+NULL
+) {
+
+203 
+	`≥º‹
+("Oh fuck");
+
+204 
+	`sig«l_h™dÀr
+(9);
+
+208 
+	`¥ötf
+("Sèπög %s...\n", 
+≥î
+ =
+TF_MASTER
+ ? "MASTER" : "SLAVE");
+
+212 i‡(
+≥î
+ =
+TF_MASTER
+) {
+
+213 
+ªtc
+ = 
+	`˛⁄e
+(&
+demo_˛õ¡
+, (*Ë
+°ack
+ + 8192, 
+CLONE_VM
+ | 
+CLONE_FILES
+, 0);
+
+216 
+ªtc
+ = 
+	`˛⁄e
+(&
+demo_£rvî
+, (*Ë
+°ack
+ + 8192, 
+CLONE_VM
+ | 
+CLONE_FILES
+, 0);
+
+219 i‡(
+ªtc
+ == 0) {
+
+220 
+	`≥º‹
+("Clone fail");
+
+221 
+	`sig«l_h™dÀr
+(9);
+
+225 
+	`¥ötf
+("Thread started\n");
+
+226 
+	}
+}
+
+	@TinyFrame-master/demo/demo.h
+
+5 #i‚de‡
+TF_DEMO_H
+
+
+6 
+	#TF_DEMO_H
+
+
+	)
+
+8 
+	~<°dboﬁ.h
+>
+
+9 
+	~"../TöyFøme.h
+"
+
+10 
+	~"utûs.h
+"
+
+12 
+	#PORT
+ 9798
+
+	)
+
+14 
+TöyFøme
+ *
+demo_tf
+;
+
+17 
+demo_¶ìp
+();
+
+20 
+demo_öô
+(
+TF_Pìr
+ 
+≥î
+);
+
+23 
+demo_disc⁄n
+();
+
+	@TinyFrame-master/demo/simple/TF_Config.h
+
+5 #i‚de‡
+TF_CONFIG_H
+
+
+6 
+	#TF_CONFIG_H
+
+
+	)
+
+8 
+	~<°döt.h
+>
+
+9 
+	~<°dio.h
+>
+
+11 
+	#TF_ID_BYTES
+ 1
+
+	)
+
+12 
+	#TF_LEN_BYTES
+ 2
+
+	)
+
+13 
+	#TF_TYPE_BYTES
+ 1
+
+	)
+
+14 
+	#TF_CKSUM_TYPE
+ 
+TF_CKSUM_CRC16
+
+
+	)
+
+15 
+	#TF_USE_SOF_BYTE
+ 1
+
+	)
+
+16 
+	#TF_SOF_BYTE
+ 0x01
+
+	)
+
+17 
+uöt16_t
+ 
+	tTF_TICKS
+;
+
+18 
+uöt8_t
+ 
+	tTF_COUNT
+;
+
+19 
+	#TF_MAX_PAYLOAD_RX
+ 1024
+
+	)
+
+20 
+	#TF_SENDBUF_LEN
+ 1024
+
+	)
+
+21 
+	#TF_MAX_ID_LST
+ 10
+
+	)
+
+22 
+	#TF_MAX_TYPE_LST
+ 10
+
+	)
+
+23 
+	#TF_MAX_GEN_LST
+ 5
+
+	)
+
+24 
+	#TF_PARSER_TIMEOUT_TICKS
+ 10
+
+	)
+
+26 
+	#TF_Eº‹
+(
+f‹m©
+, ...Ë
+	`¥ötf
+("[TF] " f‹m© "\n", ##
+__VA_ARGS__
+)
+
+	)
+
+	@TinyFrame-master/demo/simple/test.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°rög.h
+>
+
+3 
+	~"../../TöyFøme.h
+"
+
+4 
+	~"../utûs.h
+"
+
+6 
+TöyFøme
+ *
+	gdemo_tf
+;
+
+8 
+boﬁ
+ 
+	gdo_c‹ru±
+ = 
+Ál£
+;
+
+14 
+	$TF_WrôeIm∂
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àn
+)
+
+16 
+	`¥ötf
+("--------------------\n");
+
+17 
+	`¥ötf
+("\033[32mTF_WriteImpl - sending frame:\033[0m\n");
+
+19 
+uöt8_t
+ *
+xbuff
+ = (uöt8_à*)
+buff
+;
+
+20 i‡(
+do_c‹ru±
+) {
+
+21 
+	`¥ötf
+("(corruptingÅoÅest checksum checking...)\n");
+
+22 
+xbuff
+[8]++;
+
+25 
+	`dumpFøme
+(
+xbuff
+, 
+Àn
+);
+
+28 
+	`TF_Ac˚±
+(
+tf
+, 
+xbuff
+, 
+Àn
+);
+
+29 
+	}
+}
+
+32 
+TF_Resu…
+ 
+	$myLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+34 
+	`dumpFømeInfo
+(
+msg
+);
+
+35  
+TF_STAY
+;
+
+36 
+	}
+}
+
+38 
+TF_Resu…
+ 
+	$ã°IdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+40 
+	`¥ötf
+("OK - ID ListenerÅriggered for msg!\n");
+
+41 
+	`dumpFømeInfo
+(
+msg
+);
+
+42  
+TF_CLOSE
+;
+
+43 
+	}
+}
+
+45 
+	$maö
+()
+
+47 
+TF_Msg
+ 
+msg
+;
+
+48 c⁄° *
+l⁄g°r
+ = "Lorem ipsum dolor sitámet.";
+
+51 
+demo_tf
+ = 
+	`TF_Inô
+(
+TF_MASTER
+);
+
+52 
+	`TF_AddGíîicLi°íî
+(
+demo_tf
+, 
+myLi°íî
+);
+
+54 
+	`¥ötf
+("------ Simulate sendingá message --------\n");
+
+56 
+	`TF_CÀ¨Msg
+(&
+msg
+);
+
+57 
+msg
+.
+ty≥
+ = 0x22;
+
+58 
+msg
+.
+d©a
+ = (
+pu8
+) "Hello TinyFrame";
+
+59 
+msg
+.
+Àn
+ = 16;
+
+60 
+	`TF_Síd
+(
+demo_tf
+, &
+msg
+);
+
+62 
+msg
+.
+ty≥
+ = 0x33;
+
+63 
+msg
+.
+d©a
+ = (
+pu8
+Ë
+l⁄g°r
+;
+
+64 
+msg
+.
+Àn
+ = (
+TF_LEN
+Ë(
+	`°æí
+(
+l⁄g°r
+) + 1);
+
+65 
+	`TF_Síd
+(
+demo_tf
+, &
+msg
+);
+
+67 
+msg
+.
+ty≥
+ = 0x44;
+
+68 
+msg
+.
+d©a
+ = (
+pu8
+) "Hello2";
+
+69 
+msg
+.
+Àn
+ = 7;
+
+70 
+	`TF_Síd
+(
+demo_tf
+, &
+msg
+);
+
+72 
+msg
+.
+Àn
+ = 0;
+
+73 
+msg
+.
+ty≥
+ = 0x77;
+
+74 
+	`TF_Quîy
+(
+demo_tf
+, &
+msg
+, 
+ã°IdLi°íî
+, 0);
+
+76 
+	`¥ötf
+("This should fail:\n");
+
+79 
+do_c‹ru±
+ = 
+åue
+;
+
+80 
+msg
+.
+ty≥
+ = 0x44;
+
+81 
+msg
+.
+d©a
+ = (
+pu8
+) "Hello2";
+
+82 
+msg
+.
+Àn
+ = 7;
+
+83 
+	`TF_Síd
+(
+demo_tf
+, &
+msg
+);
+
+84 
+	}
+}
+
+	@TinyFrame-master/demo/simple_custom_cksum/TF_Config.h
+
+5 #i‚de‡
+TF_CONFIG_H
+
+
+6 
+	#TF_CONFIG_H
+
+
+	)
+
+8 
+	~<°döt.h
+>
+
+9 
+	~<°dio.h
+>
+
+11 
+	#TF_ID_BYTES
+ 1
+
+	)
+
+12 
+	#TF_LEN_BYTES
+ 2
+
+	)
+
+13 
+	#TF_TYPE_BYTES
+ 1
+
+	)
+
+14 
+	#TF_CKSUM_TYPE
+ 
+TF_CKSUM_CUSTOM8
+
+
+	)
+
+15 
+	#TF_USE_SOF_BYTE
+ 1
+
+	)
+
+16 
+	#TF_SOF_BYTE
+ 0x01
+
+	)
+
+17 
+uöt16_t
+ 
+	tTF_TICKS
+;
+
+18 
+uöt8_t
+ 
+	tTF_COUNT
+;
+
+19 
+	#TF_MAX_PAYLOAD_RX
+ 1024
+
+	)
+
+20 
+	#TF_SENDBUF_LEN
+ 1024
+
+	)
+
+21 
+	#TF_MAX_ID_LST
+ 10
+
+	)
+
+22 
+	#TF_MAX_TYPE_LST
+ 10
+
+	)
+
+23 
+	#TF_MAX_GEN_LST
+ 5
+
+	)
+
+24 
+	#TF_PARSER_TIMEOUT_TICKS
+ 10
+
+	)
+
+26 
+	#TF_Eº‹
+(
+f‹m©
+, ...Ë
+	`¥ötf
+("[TF] " f‹m© "\n", ##
+__VA_ARGS__
+)
+
+	)
+
+	@TinyFrame-master/demo/simple_custom_cksum/test.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°rög.h
+>
+
+3 
+	~"../../TöyFøme.h
+"
+
+4 
+	~"../utûs.h
+"
+
+6 
+TöyFøme
+ *
+	gdemo_tf
+;
+
+8 
+boﬁ
+ 
+	gdo_c‹ru±
+ = 
+Ál£
+;
+
+14 
+	$TF_WrôeIm∂
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àn
+)
+
+16 
+	`¥ötf
+("--------------------\n");
+
+17 
+	`¥ötf
+("\033[32mTF_WriteImpl - sending frame:\033[0m\n");
+
+19 
+uöt8_t
+ *
+xbuff
+ = (uöt8_à*)
+buff
+;
+
+20 i‡(
+do_c‹ru±
+) {
+
+21 
+	`¥ötf
+("(corruptingÅoÅest checksum checking...)\n");
+
+22 
+xbuff
+[8]++;
+
+25 
+	`dumpFøme
+(
+xbuff
+, 
+Àn
+);
+
+28 
+	`TF_Ac˚±
+(
+tf
+, 
+xbuff
+, 
+Àn
+);
+
+29 
+	}
+}
+
+32 
+TF_Resu…
+ 
+	$myLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+34 
+	`dumpFømeInfo
+(
+msg
+);
+
+35  
+TF_STAY
+;
+
+36 
+	}
+}
+
+38 
+TF_Resu…
+ 
+	$ã°IdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+40 
+	`¥ötf
+("OK - ID ListenerÅriggered for msg!\n");
+
+41 
+	`dumpFømeInfo
+(
+msg
+);
+
+42  
+TF_CLOSE
+;
+
+43 
+	}
+}
+
+45 
+	$maö
+()
+
+47 
+TF_Msg
+ 
+msg
+;
+
+48 c⁄° *
+l⁄g°r
+ = "Lorem ipsum dolor sitámet.";
+
+51 
+demo_tf
+ = 
+	`TF_Inô
+(
+TF_MASTER
+);
+
+52 
+	`TF_AddGíîicLi°íî
+(
+demo_tf
+, 
+myLi°íî
+);
+
+54 
+	`¥ötf
+("------ Simulate sendingá message --------\n");
+
+56 
+	`TF_CÀ¨Msg
+(&
+msg
+);
+
+57 
+msg
+.
+ty≥
+ = 0x22;
+
+58 
+msg
+.
+d©a
+ = (
+pu8
+) "Hello TinyFrame";
+
+59 
+msg
+.
+Àn
+ = 16;
+
+60 
+	`TF_Síd
+(
+demo_tf
+, &
+msg
+);
+
+62 
+	`¥ötf
+("This should fail:\n");
+
+65 
+do_c‹ru±
+ = 
+åue
+;
+
+66 
+msg
+.
+ty≥
+ = 0x44;
+
+67 
+msg
+.
+d©a
+ = (
+pu8
+) "Hello2";
+
+68 
+msg
+.
+Àn
+ = 7;
+
+69 
+	`TF_Síd
+(
+demo_tf
+, &
+msg
+);
+
+70 
+	}
+}
+
+75 
+TF_CKSUM
+ 
+	$TF_CksumSèπ
+()
+
+78 
+	}
+}
+
+80 
+TF_CKSUM
+ 
+	$TF_CksumAdd
+(
+TF_CKSUM
+ 
+cksum
+, 
+uöt8_t
+ 
+byã
+)
+
+82  
+cksum
+ ^ 
+byã
+ + 1;
+
+83 
+	}
+}
+
+85 
+TF_CKSUM
+ 
+	$TF_CksumEnd
+(
+TF_CKSUM
+ 
+cksum
+)
+
+87  ~
+cksum
+ ^ 0xA5;
+
+88 
+	}
+}
+
+	@TinyFrame-master/demo/simple_long_payload/TF_Config.h
+
+5 #i‚de‡
+TF_CONFIG_H
+
+
+6 
+	#TF_CONFIG_H
+
+
+	)
+
+8 
+	~<°döt.h
+>
+
+9 
+	~<°dio.h
+>
+
+11 
+	#TF_ID_BYTES
+ 1
+
+	)
+
+12 
+	#TF_LEN_BYTES
+ 2
+
+	)
+
+13 
+	#TF_TYPE_BYTES
+ 1
+
+	)
+
+14 
+	#TF_CKSUM_TYPE
+ 
+TF_CKSUM_CRC16
+
+
+	)
+
+15 
+	#TF_USE_SOF_BYTE
+ 1
+
+	)
+
+16 
+	#TF_SOF_BYTE
+ 0x01
+
+	)
+
+17 
+uöt16_t
+ 
+	tTF_TICKS
+;
+
+18 
+uöt8_t
+ 
+	tTF_COUNT
+;
+
+19 
+	#TF_MAX_PAYLOAD_RX
+ 10240
+
+	)
+
+20 
+	#TF_SENDBUF_LEN
+ 64
+
+	)
+
+21 
+	#TF_MAX_ID_LST
+ 10
+
+	)
+
+22 
+	#TF_MAX_TYPE_LST
+ 10
+
+	)
+
+23 
+	#TF_MAX_GEN_LST
+ 5
+
+	)
+
+24 
+	#TF_PARSER_TIMEOUT_TICKS
+ 10
+
+	)
+
+26 
+	#TF_Eº‹
+(
+f‹m©
+, ...Ë
+	`¥ötf
+("[TF] " f‹m© "\n", ##
+__VA_ARGS__
+)
+
+	)
+
+	@TinyFrame-master/demo/simple_long_payload/test.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°rög.h
+>
+
+3 
+	~"../../TöyFøme.h
+"
+
+4 
+	~"../utûs.h
+"
+
+6 
+TöyFøme
+ *
+	gdemo_tf
+;
+
+8 c⁄° *
+romeo
+;
+
+14 
+	$TF_WrôeIm∂
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àn
+)
+
+16 
+	`¥ötf
+("--------------------\n");
+
+17 
+	`¥ötf
+("\033[32mTF_WriteImpl - sending frame:\033[0m\n");
+
+18 
+	`dumpFøme
+(
+buff
+, 
+Àn
+);
+
+21 
+	`TF_Ac˚±
+(
+tf
+, 
+buff
+, 
+Àn
+);
+
+22 
+	}
+}
+
+25 
+TF_Resu…
+ 
+	$myLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+27 ()
+tf
+;
+
+28 
+	`dumpFømeInfo
+(
+msg
+);
+
+29 i‡(
+	`°rcmp
+((c⁄° *Ë
+msg
+->
+d©a
+, 
+romeo
+) == 0) {
+
+30 
+	`¥ötf
+("FILE TRANSFERRED OK!\r\n");
+
+33 
+	`¥ötf
+("FAIL!!!!\r\n");
+
+35  
+TF_STAY
+;
+
+36 
+	}
+}
+
+38 
+	$maö
+()
+
+40 
+TF_Msg
+ 
+msg
+;
+
+43 
+demo_tf
+ = 
+	`TF_Inô
+(
+TF_MASTER
+);
+
+44 
+	`TF_AddGíîicLi°íî
+(
+demo_tf
+, 
+myLi°íî
+);
+
+46 
+	`¥ötf
+("------ Simulate sendingá LOOONG message --------\n");
+
+48 
+	`TF_CÀ¨Msg
+(&
+msg
+);
+
+49 
+msg
+.
+ty≥
+ = 0x22;
+
+50 
+msg
+.
+d©a
+ = (
+pu8
+Ë
+romeo
+;
+
+51 
+msg
+.
+Àn
+ = (
+TF_LEN
+Ë
+	`°æí
+(
+romeo
+);
+
+52 
+	`TF_Síd
+(
+demo_tf
+, &
+msg
+);
+
+53 
+	}
+}
+
+55 c⁄° *
+	gromeo
+ = "THE TRAGEDY OF ROMEO AND JULIET\n"
+
+	@TinyFrame-master/demo/simple_multipart/TF_Config.h
+
+5 #i‚de‡
+TF_CONFIG_H
+
+
+6 
+	#TF_CONFIG_H
+
+
+	)
+
+8 
+	~<°döt.h
+>
+
+9 
+	~<°dio.h
+>
+
+11 
+	#TF_ID_BYTES
+ 1
+
+	)
+
+12 
+	#TF_LEN_BYTES
+ 2
+
+	)
+
+13 
+	#TF_TYPE_BYTES
+ 1
+
+	)
+
+14 
+	#TF_CKSUM_TYPE
+ 
+TF_CKSUM_CRC16
+
+
+	)
+
+15 
+	#TF_USE_SOF_BYTE
+ 1
+
+	)
+
+16 
+	#TF_SOF_BYTE
+ 0x01
+
+	)
+
+17 
+uöt16_t
+ 
+	tTF_TICKS
+;
+
+18 
+uöt8_t
+ 
+	tTF_COUNT
+;
+
+19 
+	#TF_MAX_PAYLOAD_RX
+ 10240
+
+	)
+
+20 
+	#TF_SENDBUF_LEN
+ 64
+
+	)
+
+21 
+	#TF_MAX_ID_LST
+ 10
+
+	)
+
+22 
+	#TF_MAX_TYPE_LST
+ 10
+
+	)
+
+23 
+	#TF_MAX_GEN_LST
+ 5
+
+	)
+
+24 
+	#TF_PARSER_TIMEOUT_TICKS
+ 10
+
+	)
+
+26 
+	#TF_Eº‹
+(
+f‹m©
+, ...Ë
+	`¥ötf
+("[TF] " f‹m© "\n", ##
+__VA_ARGS__
+)
+
+	)
+
+	@TinyFrame-master/demo/simple_multipart/test.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°rög.h
+>
+
+3 
+	~"../../TöyFøme.h
+"
+
+4 
+	~"../utûs.h
+"
+
+6 
+TöyFøme
+ *
+	gdemo_tf
+;
+
+8 c⁄° *
+romeo
+;
+
+14 
+	$TF_WrôeIm∂
+(
+TöyFøme
+ *
+tf
+, c⁄° 
+uöt8_t
+ *
+buff
+, 
+uöt32_t
+ 
+Àn
+)
+
+16 
+	`¥ötf
+("--------------------\n");
+
+17 
+	`¥ötf
+("\033[32mTF_WriteImpl - sending frame:\033[0m\n");
+
+18 
+	`dumpFøme
+(
+buff
+, 
+Àn
+);
+
+21 
+	`TF_Ac˚±
+(
+tf
+, 
+buff
+, 
+Àn
+);
+
+22 
+	}
+}
+
+25 
+TF_Resu…
+ 
+	$myLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+27 ()
+tf
+;
+
+28 
+	`dumpFømeInfo
+(
+msg
+);
+
+29 i‡(
+	`°rcmp
+((c⁄° *Ë
+msg
+->
+d©a
+, 
+romeo
+) == 0) {
+
+30 
+	`¥ötf
+("FILE TRANSFERRED OK!\r\n");
+
+33 
+	`¥ötf
+("FAIL!!!!\r\n");
+
+35  
+TF_STAY
+;
+
+36 
+	}
+}
+
+38 
+	$maö
+()
+
+40 
+TF_Msg
+ 
+msg
+;
+
+43 
+demo_tf
+ = 
+	`TF_Inô
+(
+TF_MASTER
+);
+
+44 
+	`TF_AddGíîicLi°íî
+(
+demo_tf
+, 
+myLi°íî
+);
+
+46 
+	`¥ötf
+("------ Simulate sendingá LOOONG message --------\n");
+
+49 
+	`TF_CÀ¨Msg
+(&
+msg
+);
+
+50 
+msg
+.
+ty≥
+ = 0x22;
+
+51 
+msg
+.
+Àn
+ = (
+TF_LEN
+Ë
+	`°æí
+(
+romeo
+);
+
+54 
+	`TF_Síd_Mu…ù¨t
+(
+demo_tf
+, &
+msg
+);
+
+59 
+uöt32_t
+ 
+ªmaö
+ = 
+	`°æí
+(
+romeo
+);
+
+60 c⁄° 
+uöt8_t
+* 
+toSíd
+ = (c⁄° uöt8_t*)
+romeo
+;
+
+62 
+ªmaö
+ > 0) {
+
+63 
+uöt32_t
+ 
+chunk
+ = (
+ªmaö
+>16) ? 16 :Ñemain;
+
+66 
+	`TF_Mu…ù¨t_Paylﬂd
+(
+demo_tf
+, 
+toSíd
+, 
+chunk
+);
+
+68 
+ªmaö
+ -
+chunk
+;
+
+69 
+toSíd
+ +
+chunk
+;
+
+73 
+	`TF_Mu…ù¨t_Clo£
+(
+demo_tf
+);
+
+74 
+	}
+}
+
+76 c⁄° *
+	gromeo
+ = "THE TRAGEDY OF ROMEO AND JULIET\n"
+
+	@TinyFrame-master/demo/socket_demo/TF_Config.h
+
+5 #i‚de‡
+TF_CONFIG_H
+
+
+6 
+	#TF_CONFIG_H
+
+
+	)
+
+8 
+	~<°döt.h
+>
+
+9 
+	~<°dio.h
+>
+
+11 
+	#TF_ID_BYTES
+ 1
+
+	)
+
+12 
+	#TF_LEN_BYTES
+ 2
+
+	)
+
+13 
+	#TF_TYPE_BYTES
+ 1
+
+	)
+
+14 
+	#TF_CKSUM_TYPE
+ 
+TF_CKSUM_CRC16
+
+
+	)
+
+15 
+	#TF_USE_SOF_BYTE
+ 1
+
+	)
+
+16 
+	#TF_SOF_BYTE
+ 0x01
+
+	)
+
+17 
+uöt16_t
+ 
+	tTF_TICKS
+;
+
+18 
+uöt8_t
+ 
+	tTF_COUNT
+;
+
+19 
+	#TF_MAX_PAYLOAD_RX
+ 1024
+
+	)
+
+20 
+	#TF_SENDBUF_LEN
+ 1024
+
+	)
+
+21 
+	#TF_MAX_ID_LST
+ 10
+
+	)
+
+22 
+	#TF_MAX_TYPE_LST
+ 10
+
+	)
+
+23 
+	#TF_MAX_GEN_LST
+ 5
+
+	)
+
+24 
+	#TF_PARSER_TIMEOUT_TICKS
+ 10
+
+	)
+
+26 
+	#TF_Eº‹
+(
+f‹m©
+, ...Ë
+	`¥ötf
+("[TF] " f‹m© "\n", ##
+__VA_ARGS__
+)
+
+	)
+
+	@TinyFrame-master/demo/socket_demo/master.c
+
+5 
+	~<°dio.h
+>
+
+6 
+	~"../demo.h
+"
+
+8 
+TF_Resu…
+ 
+	$ã°IdLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+10 
+	`¥ötf
+("testIdListener()\n");
+
+11 
+	`dumpFømeInfo
+(
+msg
+);
+
+12  
+TF_CLOSE
+;
+
+13 
+	}
+}
+
+15 
+TF_Resu…
+ 
+	$ã°GíîicLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+17 
+	`¥ötf
+("testGenericListener()\n");
+
+18 
+	`dumpFømeInfo
+(
+msg
+);
+
+19  
+TF_STAY
+;
+
+20 
+	}
+}
+
+22 
+	$maö
+()
+
+24 
+demo_tf
+ = 
+	`TF_Inô
+(
+TF_MASTER
+);
+
+25 
+	`TF_AddGíîicLi°íî
+(
+demo_tf
+, 
+ã°GíîicLi°íî
+);
+
+27 
+	`demo_öô
+(
+TF_MASTER
+);
+
+29 
+	`TF_SídSim∂e
+(
+demo_tf
+, 1, (
+pu8
+) "Ahoj", 5);
+
+30 
+	`TF_SídSim∂e
+(
+demo_tf
+, 1, (
+pu8
+) "Hello", 6);
+
+32 
+	`TF_QuîySim∂e
+(
+demo_tf
+, 2, (
+pu8
+Ë"Quîy!", 6, 
+ã°IdLi°íî
+, 0);
+
+34 
+	`demo_¶ìp
+();
+
+35 
+	}
+}
+
+	@TinyFrame-master/demo/socket_demo/slave.c
+
+5 
+	~<°dio.h
+>
+
+6 
+	~"../demo.h
+"
+
+8 
+TF_Resu…
+ 
+	$hñloLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+10 
+	`¥ötf
+("helloListener()\n");
+
+11 
+	`dumpFømeInfo
+(
+msg
+);
+
+12  
+TF_STAY
+;
+
+13 
+	}
+}
+
+15 
+TF_Resu…
+ 
+	$ª∂yLi°íî
+(
+TöyFøme
+ *
+tf
+, 
+TF_Msg
+ *
+msg
+)
+
+17 
+	`¥ötf
+("replyListener()\n");
+
+18 
+	`dumpFømeInfo
+(
+msg
+);
+
+19 
+msg
+->
+d©a
+ = (c⁄° 
+uöt8_t
+ *) "responseÅo query";
+
+20 
+msg
+->
+Àn
+ = (
+TF_LEN
+Ë
+	`°æí
+((c⁄° *Ëmsg->
+d©a
+);
+
+21 
+	`TF_Re•⁄d
+(
+tf
+, 
+msg
+);
+
+24 
+msg
+->
+d©a
+ = (c⁄° 
+uöt8_t
+ *) "SPAM";
+
+25 
+msg
+->
+Àn
+ = 5;
+
+26 
+	`TF_Re•⁄d
+(
+tf
+, 
+msg
+);
+
+29 
+	`TF_SídSim∂e
+(
+tf
+, 77, (c⁄° 
+uöt8_t
+ *) "NAZDAR", 7);
+
+30  
+TF_STAY
+;
+
+31 
+	}
+}
+
+33 
+	$maö
+()
+
+35 
+demo_tf
+ = 
+	`TF_Inô
+(
+TF_SLAVE
+);
+
+36 
+	`TF_AddTy≥Li°íî
+(
+demo_tf
+, 1, 
+hñloLi°íî
+);
+
+37 
+	`TF_AddTy≥Li°íî
+(
+demo_tf
+, 2, 
+ª∂yLi°íî
+);
+
+39 
+	`demo_öô
+(
+TF_SLAVE
+);
+
+40 
+	`demo_¶ìp
+();
+
+41 
+	}
+}
+
+	@TinyFrame-master/demo/utils.c
+
+5 
+	~"utûs.h
+"
+
+6 
+	~<°dio.h
+>
+
+9 
+	$dumpFøme
+(c⁄° 
+uöt8_t
+ *
+buff
+, 
+size_t
+ 
+Àn
+)
+
+11 
+size_t
+ 
+i
+;
+
+12 
+i
+ = 0; i < 
+Àn
+; i++) {
+
+13 
+	`¥ötf
+("%3u \033[94m%02X\033[0m", 
+buff
+[
+i
+], buff[i]);
+
+14 i‡(
+buff
+[
+i
+] >= 0x20 && buff[i] < 127) {
+
+15 
+	`¥ötf
+(" %c", 
+buff
+[
+i
+]);
+
+18 
+	`¥ötf
+(" \033[31m.\033[0m");
+
+20 
+	`¥ötf
+("\n");
+
+22 
+	`¥ötf
+("---Énd of frame ---\n\n");
+
+23 
+	}
+}
+
+25 
+	$dumpFømeInfo
+(
+TF_Msg
+ *
+msg
+)
+
+27 
+	`¥ötf
+("\033[33mFrame info\n"
+
+32 
+msg
+->
+ty≥
+, msg->
+Àn
+, msg->
+d©a
+, msg->Àn, msg->
+‰ame_id
+);
+
+33 
+	}
+}
+
+	@TinyFrame-master/demo/utils.h
+
+5 #i‚de‡
+TF_UTILS_H
+
+
+6 
+	#TF_UTILS_H
+
+
+	)
+
+8 
+	~<°dio.h
+>
+
+9 
+	~"../TöyFøme.h
+"
+
+12 * 
+	tpu8
+;
+
+17 
+dumpFøme
+(c⁄° 
+uöt8_t
+ *
+buff
+, 
+size_t
+ 
+Àn
+);
+
+24 
+dumpFømeInfo
+(
+TF_Msg
+ *
+msg
+);
+
+	@TinyFrame-master/utilities/payload_builder.c
+
+1 
+	~<°rög.h
+>
+
+2 
+	~"∑ylﬂd_buûdî.h
+"
+
+4 
+	#pb_check_ˇ∑côy
+(
+pb
+, 
+√eded
+) \
+
+5 i‡((
+pb
+)->
+cuºít
+ + (
+√eded
+Ë> (pb)->
+íd
+) { \
+
+6 i‡((
+pb
+)->
+fuŒ_h™dÀr
+ =
+NULL
+ || !’b)->
+	`fuŒ_h™dÀr
+’b, 
+√eded
+)Ë’b)->
+ok
+ = 0; \
+
+7 }
+
+	)
+
+10 
+boﬁ
+ 
+	$pb_buf
+(
+PaylﬂdBuûdî
+ *
+pb
+, c⁄° 
+uöt8_t
+ *
+buf
+, 
+uöt32_t
+ 
+Àn
+)
+
+12 
+	`pb_check_ˇ∑côy
+(
+pb
+, 
+Àn
+);
+
+13 i‡(!
+pb
+->
+ok
+Ë 
+Ál£
+;
+
+15 
+	`mem˝y
+(
+pb
+->
+cuºít
+, 
+buf
+, 
+Àn
+);
+
+16 
+pb
+->
+cuºít
+ +
+Àn
+;
+
+17  
+åue
+;
+
+18 
+	}
+}
+
+21 
+boﬁ
+ 
+	$pb_°rög
+(
+PaylﬂdBuûdî
+ *
+pb
+, c⁄° *
+°r
+)
+
+23 
+uöt32_t
+ 
+Àn
+ = (uöt32_tË
+	`°æí
+(
+°r
+);
+
+24 
+	`pb_check_ˇ∑côy
+(
+pb
+, 
+Àn
++1);
+
+25 i‡(!
+pb
+->
+ok
+Ë 
+Ál£
+;
+
+27 
+	`mem˝y
+(
+pb
+->
+cuºít
+, 
+°r
+, 
+Àn
++1);
+
+28 
+pb
+->
+cuºít
+ +
+Àn
++1;
+
+29  
+åue
+;
+
+30 
+	}
+}
+
+33 
+boﬁ
+ 
+	$pb_u8
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+uöt8_t
+ 
+byã
+)
+
+35 
+	`pb_check_ˇ∑côy
+(
+pb
+, 1);
+
+36 i‡(!
+pb
+->
+ok
+Ë 
+Ál£
+;
+
+38 *
+pb
+->
+cuºít
+++ = 
+byã
+;
+
+39  
+åue
+;
+
+40 
+	}
+}
+
+43 
+boﬁ
+ 
+	$pb_u16
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+uöt16_t
+ 
+w‹d
+)
+
+45 
+	`pb_check_ˇ∑côy
+(
+pb
+, 2);
+
+46 i‡(!
+pb
+->
+ok
+Ë 
+Ál£
+;
+
+48 i‡(
+pb
+->
+bigídün
+) {
+
+49 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 8) & 0xFF);
+
+50 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë(
+w‹d
+ & 0xFF);
+
+52 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë(
+w‹d
+ & 0xFF);
+
+53 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 8) & 0xFF);
+
+55  
+åue
+;
+
+56 
+	}
+}
+
+59 
+boﬁ
+ 
+	$pb_u32
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+uöt32_t
+ 
+w‹d
+)
+
+61 
+	`pb_check_ˇ∑côy
+(
+pb
+, 4);
+
+62 i‡(!
+pb
+->
+ok
+Ë 
+Ál£
+;
+
+64 i‡(
+pb
+->
+bigídün
+) {
+
+65 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 24) & 0xFF);
+
+66 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 16) & 0xFF);
+
+67 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 8) & 0xFF);
+
+68 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë(
+w‹d
+ & 0xFF);
+
+70 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë(
+w‹d
+ & 0xFF);
+
+71 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 8) & 0xFF);
+
+72 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 16) & 0xFF);
+
+73 *
+pb
+->
+cuºít
+++ = (
+uöt8_t
+Ë((
+w‹d
+ >> 24) & 0xFF);
+
+75  
+åue
+;
+
+76 
+	}
+}
+
+79 
+boﬁ
+ 
+	$pb_i8
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+öt8_t
+ 
+byã
+)
+
+81  
+	`pb_u8
+(
+pb
+, ((
+c⁄v8
+){.
+i8
+ = 
+byã
+}).
+u8
+);
+
+82 
+	}
+}
+
+85 
+boﬁ
+ 
+	$pb_i16
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+öt16_t
+ 
+w‹d
+)
+
+87  
+	`pb_u16
+(
+pb
+, ((
+c⁄v16
+){.
+i16
+ = 
+w‹d
+}).
+u16
+);
+
+88 
+	}
+}
+
+91 
+boﬁ
+ 
+	$pb_i32
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+öt32_t
+ 
+w‹d
+)
+
+93  
+	`pb_u32
+(
+pb
+, ((
+c⁄v32
+){.
+i32
+ = 
+w‹d
+}).
+u32
+);
+
+94 
+	}
+}
+
+97 
+boﬁ
+ 
+	$pb_Êﬂt
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+f
+)
+
+99  
+	`pb_u32
+(
+pb
+, ((
+c⁄v32
+){.
+f32
+ = 
+f
+}).
+u32
+);
+
+100 
+	}
+}
+
+	@TinyFrame-master/utilities/payload_builder.h
+
+1 #i‚de‡
+PAYLOAD_BUILDER_H
+
+
+2 
+	#PAYLOAD_BUILDER_H
+
+
+	)
+
+19 
+	~<°döt.h
+>
+
+20 
+	~<°dboﬁ.h
+>
+
+21 
+	~<°ddef.h
+>
+
+22 
+	~"ty≥_c€r˚.h
+"
+
+24 
+PaylﬂdBuûdî_
+ 
+	tPaylﬂdBuûdî
+;
+
+37 
+	$boﬁ
+ (*
+	tpb_fuŒ_h™dÀr
+)(
+	tPaylﬂdBuûdî
+ *
+	tpb
+, 
+	tuöt32_t
+ 
+	t√eded
+);
+
+39 
+	sPaylﬂdBuûdî_
+ {
+
+40 
+uöt8_t
+ *
+°¨t
+;
+
+41 
+uöt8_t
+ *
+cuºít
+;
+
+42 
+uöt8_t
+ *
+íd
+;
+
+43 
+pb_fuŒ_h™dÀr
+ 
+fuŒ_h™dÀr
+;
+
+44 
+boﬁ
+ 
+bigídün
+;
+
+45 
+boﬁ
+ 
+ok
+;
+
+51 
+	#pb_°¨t_e
+(
+buf
+, 
+ˇ∑côy
+, 
+bigídün
+, 
+fuŒ_h™dÀr
+Ë((
+PaylﬂdBuûdî
+){buf, buf, (buf)+(ˇ∑côy), fuŒ_h™dÀr, bigídün, 1
+	}
+})
+
+	)
+
+54 
+	#pb_°¨t_be
+(
+buf
+, 
+ˇ∑côy
+, 
+fuŒ_h™dÀr
+Ë
+	`pb_°¨t_e
+(buf, c≠acôy, 1, fuŒ_h™dÀr)
+
+	)
+
+57 
+	#pb_°¨t_À
+(
+buf
+, 
+ˇ∑côy
+, 
+fuŒ_h™dÀr
+Ë
+	`pb_°¨t_e
+(buf, c≠acôy, 0, fuŒ_h™dÀr)
+
+	)
+
+60 
+	#pb_°¨t
+(
+buf
+, 
+ˇ∑côy
+, 
+fuŒ_h™dÀr
+Ë
+	`pb_°¨t_À
+(buf, c≠acôy, fuŒ_h™dÀr)
+
+	)
+
+65 
+	#pb_Àngth
+(
+pb
+Ë(’b)->
+cuºít
+ - (pb)->
+°¨t
+)
+
+	)
+
+68 
+	#pb_ªwöd
+(
+pb
+Ëdÿ{Öb->
+cuºít
+ =Öb->
+°¨t
+; } 0)
+
+	)
+
+72 
+boﬁ
+ 
+pb_buf
+(
+PaylﬂdBuûdî
+ *
+pb
+, c⁄° 
+uöt8_t
+ *
+buf
+, 
+uöt32_t
+ 
+Àn
+);
+
+75 
+boﬁ
+ 
+pb_°rög
+(
+PaylﬂdBuûdî
+ *
+pb
+, c⁄° *
+°r
+);
+
+78 
+boﬁ
+ 
+pb_u8
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+uöt8_t
+ 
+byã
+);
+
+81 
+ölöe
+ 
+boﬁ
+ 
+	$pb_boﬁ
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+boﬁ
+ 
+b
+)
+
+83  
+	`pb_u8
+(
+pb
+, (
+uöt8_t
+Ë
+b
+);
+
+84 
+	}
+}
+
+87 
+boﬁ
+ 
+pb_u16
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+uöt16_t
+ 
+w‹d
+);
+
+90 
+boﬁ
+ 
+pb_u32
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+uöt32_t
+ 
+w‹d
+);
+
+93 
+boﬁ
+ 
+pb_i8
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+öt8_t
+ 
+byã
+);
+
+96 
+ölöe
+ 
+boﬁ
+ 
+	$pb_ch¨
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+c
+)
+
+98  
+	`pb_i8
+(
+pb
+, 
+c
+);
+
+99 
+	}
+}
+
+102 
+boﬁ
+ 
+pb_i16
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+öt16_t
+ 
+w‹d
+);
+
+105 
+boﬁ
+ 
+pb_i32
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+öt32_t
+ 
+w‹d
+);
+
+108 
+boﬁ
+ 
+pb_Êﬂt
+(
+PaylﬂdBuûdî
+ *
+pb
+, 
+f
+);
+
+	@TinyFrame-master/utilities/payload_parser.c
+
+1 
+	~"∑ylﬂd_∑r£r.h
+"
+
+3 
+	#µ_check_ˇ∑côy
+(
+µ
+, 
+√eded
+) \
+
+4 i‡((
+µ
+)->
+cuºít
+ + (
+√eded
+Ë> (µ)->
+íd
+) { \
+
+5 i‡((
+µ
+)->
+em±y_h™dÀr
+ =
+NULL
+ || !’p)->
+	`em±y_h™dÀr
+’p, 
+√eded
+)Ë{’p)->
+ok
+ = 0;} ; \
+
+6 }
+
+	)
+
+8 
+	$µ_skù
+(
+PaylﬂdP¨£r
+ *
+µ
+, 
+uöt32_t
+ 
+num
+)
+
+10 
+µ
+->
+cuºít
+ +
+num
+;
+
+11 
+	}
+}
+
+13 
+uöt8_t
+ 
+	$µ_u8
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+15 
+	`µ_check_ˇ∑côy
+(
+µ
+, 1);
+
+16 i‡(!
+µ
+->
+ok
+)  0;
+
+18  *
+µ
+->
+cuºít
+++;
+
+19 
+	}
+}
+
+21 
+uöt16_t
+ 
+	$µ_u16
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+23 
+	`µ_check_ˇ∑côy
+(
+µ
+, 2);
+
+24 i‡(!
+µ
+->
+ok
+)  0;
+
+26 
+uöt16_t
+ 
+x
+ = 0;
+
+28 i‡(
+µ
+->
+bigídün
+) {
+
+29 
+x
+ |*
+µ
+->
+cuºít
+++ << 8;
+
+30 
+x
+ |*
+µ
+->
+cuºít
+++;
+
+32 
+x
+ |*
+µ
+->
+cuºít
+++;
+
+33 
+x
+ |*
+µ
+->
+cuºít
+++ << 8;
+
+35  
+x
+;
+
+36 
+	}
+}
+
+38 
+uöt32_t
+ 
+	$µ_u32
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+40 
+	`µ_check_ˇ∑côy
+(
+µ
+, 4);
+
+41 i‡(!
+µ
+->
+ok
+)  0;
+
+43 
+uöt32_t
+ 
+x
+ = 0;
+
+45 i‡(
+µ
+->
+bigídün
+) {
+
+46 
+x
+ |(
+uöt32_t
+Ë(*
+µ
+->
+cuºít
+++ << 24);
+
+47 
+x
+ |(
+uöt32_t
+Ë(*
+µ
+->
+cuºít
+++ << 16);
+
+48 
+x
+ |(
+uöt32_t
+Ë(*
+µ
+->
+cuºít
+++ << 8);
+
+49 
+x
+ |*
+µ
+->
+cuºít
+++;
+
+51 
+x
+ |*
+µ
+->
+cuºít
+++;
+
+52 
+x
+ |(
+uöt32_t
+Ë(*
+µ
+->
+cuºít
+++ << 8);
+
+53 
+x
+ |(
+uöt32_t
+Ë(*
+µ
+->
+cuºít
+++ << 16);
+
+54 
+x
+ |(
+uöt32_t
+Ë(*
+µ
+->
+cuºít
+++ << 24);
+
+56  
+x
+;
+
+57 
+	}
+}
+
+59 c⁄° 
+uöt8_t
+ *
+	$µ_èû
+(
+PaylﬂdP¨£r
+ *
+µ
+, 
+uöt32_t
+ *
+Àngth
+)
+
+61 
+öt32_t
+ 
+Àn
+ = (Ë(
+µ
+->
+íd
+ -Öp->
+cuºít
+);
+
+62 i‡(!
+µ
+->
+ok
+ || 
+Àn
+ <= 0) {
+
+63 i‡(
+Àngth
+ !
+NULL
+) *length = 0;
+
+64  
+NULL
+;
+
+67 i‡(
+Àngth
+ !
+NULL
+) {
+
+68 *
+Àngth
+ = (
+uöt32_t
+Ë
+Àn
+;
+
+71  
+µ
+->
+cuºít
+;
+
+72 
+	}
+}
+
+75 
+öt8_t
+ 
+	$µ_i8
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+77  ((
+c⁄v8
+Ë{.
+u8
+ = 
+	`µ_u8
+(
+µ
+)}).
+i8
+;
+
+78 
+	}
+}
+
+81 
+öt16_t
+ 
+	$µ_i16
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+83  ((
+c⁄v16
+Ë{.
+u16
+ = 
+	`µ_u16
+(
+µ
+)}).
+i16
+;
+
+84 
+	}
+}
+
+87 
+öt32_t
+ 
+	$µ_i32
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+89  ((
+c⁄v32
+Ë{.
+u32
+ = 
+	`µ_u32
+(
+µ
+)}).
+i32
+;
+
+90 
+	}
+}
+
+93 
+	$µ_Êﬂt
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+95  ((
+c⁄v32
+Ë{.
+u32
+ = 
+	`µ_u32
+(
+µ
+)}).
+f32
+;
+
+96 
+	}
+}
+
+99 
+uöt32_t
+ 
+	$µ_°rög
+(
+PaylﬂdP¨£r
+ *
+µ
+, *
+buf„r
+, 
+uöt32_t
+ 
+maxÀn
+)
+
+101 
+	`µ_check_ˇ∑côy
+(
+µ
+, 1);
+
+102 
+uöt32_t
+ 
+Àn
+ = 0;
+
+103 
+Àn
+ < 
+maxÀn
+-1 && 
+µ
+->
+cuºít
+ !µ->
+íd
+) {
+
+104 
+c
+ = *
+buf„r
+++ = *
+µ
+->
+cuºít
+++;
+
+105 i‡(
+c
+ == 0) ;
+
+106 
+Àn
+++;
+
+108 *
+buf„r
+ = 0;
+
+109  
+Àn
+;
+
+110 
+	}
+}
+
+113 
+uöt32_t
+ 
+	$µ_buf
+(
+PaylﬂdP¨£r
+ *
+µ
+, 
+uöt8_t
+ *
+buf„r
+, 
+uöt32_t
+ 
+maxÀn
+)
+
+115 
+uöt32_t
+ 
+Àn
+ = 0;
+
+116 
+Àn
+ < 
+maxÀn
+ && 
+µ
+->
+cuºít
+ !µ->
+íd
+) {
+
+117 *
+buf„r
+++ = *
+µ
+->
+cuºít
+++;
+
+118 
+Àn
+++;
+
+120  
+Àn
+;
+
+121 
+	}
+}
+
+	@TinyFrame-master/utilities/payload_parser.h
+
+1 #i‚de‡
+PAYLOAD_PARSER_H
+
+
+2 
+	#PAYLOAD_PARSER_H
+
+
+	)
+
+23 
+	~<°döt.h
+>
+
+24 
+	~<°ddef.h
+>
+
+25 
+	~<°dboﬁ.h
+>
+
+26 
+	~"ty≥_c€r˚.h
+"
+
+28 
+PaylﬂdP¨£r_
+ 
+	tPaylﬂdP¨£r
+;
+
+41 
+	$boﬁ
+ (*
+	tµ_em±y_h™dÀr
+)(
+	tPaylﬂdP¨£r
+ *
+	tµ
+, 
+	tuöt32_t
+ 
+	t√eded
+);
+
+43 
+	sPaylﬂdP¨£r_
+ {
+
+44 
+uöt8_t
+ *
+°¨t
+;
+
+45 
+uöt8_t
+ *
+cuºít
+;
+
+46 
+uöt8_t
+ *
+íd
+;
+
+47 
+µ_em±y_h™dÀr
+ 
+em±y_h™dÀr
+;
+
+48 
+boﬁ
+ 
+bigídün
+;
+
+49 
+boﬁ
+ 
+ok
+;
+
+55 
+	#µ_°¨t_e
+(
+buf
+, 
+Àngth
+, 
+bigídün
+, 
+em±y_h™dÀr
+Ë((
+PaylﬂdP¨£r
+){buf, buf, (buf)+÷ígth),Ém±y_h™dÀr, bigídün, 1
+	}
+})
+
+	)
+
+58 
+	#µ_°¨t_be
+(
+buf
+, 
+Àngth
+, 
+em±y_h™dÀr
+Ë
+	`µ_°¨t_e
+(buf,Üígth, 1,Ém±y_h™dÀr)
+
+	)
+
+61 
+	#µ_°¨t_À
+(
+buf
+, 
+Àngth
+, 
+em±y_h™dÀr
+Ë
+	`µ_°¨t_e
+(buf,Üígth, 0,Ém±y_h™dÀr)
+
+	)
+
+64 
+	#µ_°¨t
+(
+buf
+, 
+Àngth
+, 
+em±y_h™dÀr
+Ë
+	`µ_°¨t_À
+(buf,Üígth,Ém±y_h™dÀr)
+
+	)
+
+69 
+	#µ_Àngth
+(
+µ
+Ë(’p)->
+íd
+ - (µ)->
+cuºít
+)
+
+	)
+
+72 
+	#µ_ªwöd
+(
+µ
+Ëdÿ{Öp->
+cuºít
+ =Öp->
+°¨t
+; } 0)
+
+	)
+
+84 c⁄° 
+uöt8_t
+ *
+µ_èû
+(
+PaylﬂdP¨£r
+ *
+µ
+, 
+uöt32_t
+ *
+Àngth
+);
+
+87 
+uöt8_t
+ 
+µ_u8
+(
+PaylﬂdP¨£r
+ *
+µ
+);
+
+90 
+ölöe
+ 
+öt8_t
+ 
+	$µ_boﬁ
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+92  
+	`µ_u8
+(
+µ
+) != 0;
+
+93 
+	}
+}
+
+96 
+µ_skù
+(
+PaylﬂdP¨£r
+ *
+µ
+, 
+uöt32_t
+ 
+num
+);
+
+99 
+uöt16_t
+ 
+µ_u16
+(
+PaylﬂdP¨£r
+ *
+µ
+);
+
+102 
+uöt32_t
+ 
+µ_u32
+(
+PaylﬂdP¨£r
+ *
+µ
+);
+
+105 
+öt8_t
+ 
+µ_i8
+(
+PaylﬂdP¨£r
+ *
+µ
+);
+
+108 
+ölöe
+ 
+öt8_t
+ 
+	$µ_ch¨
+(
+PaylﬂdP¨£r
+ *
+µ
+)
+
+110  
+	`µ_i8
+(
+µ
+);
+
+111 
+	}
+}
+
+114 
+öt16_t
+ 
+µ_i16
+(
+PaylﬂdP¨£r
+ *
+µ
+);
+
+117 
+öt32_t
+ 
+µ_i32
+(
+PaylﬂdP¨£r
+ *
+µ
+);
+
+120 
+µ_Êﬂt
+(
+PaylﬂdP¨£r
+ *
+µ
+);
+
+130 
+uöt32_t
+ 
+µ_°rög
+(
+PaylﬂdP¨£r
+ *
+µ
+, *
+buf„r
+, uöt32_à
+maxÀn
+);
+
+140 
+uöt32_t
+ 
+µ_buf
+(
+PaylﬂdP¨£r
+ *
+µ
+, 
+uöt8_t
+ *
+buf„r
+, uöt32_à
+maxÀn
+);
+
+	@TinyFrame-master/utilities/type_coerce.h
+
+1 #i‚de‡
+TYPE_COERCE_H
+
+
+2 
+	#TYPE_COERCE_H
+
+
+	)
+
+13 
+	~<°döt.h
+>
+
+14 
+	~<°ddef.h
+>
+
+16 
+	uc⁄v8
+ {
+
+17 
+uöt8_t
+ 
+	mu8
+;
+
+18 
+öt8_t
+ 
+	mi8
+;
+
+21 
+	uc⁄v16
+ {
+
+22 
+uöt16_t
+ 
+	mu16
+;
+
+23 
+öt16_t
+ 
+	mi16
+;
+
+26 
+	uc⁄v32
+ {
+
+27 
+uöt32_t
+ 
+	mu32
+;
+
+28 
+öt32_t
+ 
+	mi32
+;
+
+29 
+	mf32
+;
+
+	@
+1
+.
+0
+24
+985
+TinyFrame-master/TF_Config.example.h
+TinyFrame-master/TF_Integration.example.c
+TinyFrame-master/TinyFrame.c
+TinyFrame-master/TinyFrame.h
+TinyFrame-master/demo/demo.c
+TinyFrame-master/demo/demo.h
+TinyFrame-master/demo/simple/TF_Config.h
+TinyFrame-master/demo/simple/test.c
+TinyFrame-master/demo/simple_custom_cksum/TF_Config.h
+TinyFrame-master/demo/simple_custom_cksum/test.c
+TinyFrame-master/demo/simple_long_payload/TF_Config.h
+TinyFrame-master/demo/simple_long_payload/test.c
+TinyFrame-master/demo/simple_multipart/TF_Config.h
+TinyFrame-master/demo/simple_multipart/test.c
+TinyFrame-master/demo/socket_demo/TF_Config.h
+TinyFrame-master/demo/socket_demo/master.c
+TinyFrame-master/demo/socket_demo/slave.c
+TinyFrame-master/demo/utils.c
+TinyFrame-master/demo/utils.h
+TinyFrame-master/utilities/payload_builder.c
+TinyFrame-master/utilities/payload_builder.h
+TinyFrame-master/utilities/payload_parser.c
+TinyFrame-master/utilities/payload_parser.h
+TinyFrame-master/utilities/type_coerce.h

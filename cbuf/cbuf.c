@@ -18,6 +18,9 @@ u32 min(u32 data1, u32 data2)
 */
 u32 put_fifo(cbuft *cbuf, const u8* data_in, u32 len)
 {
+    if((cbuf == NULL)||(data_in == NULL)||(len==0)){
+        return 0;
+    }
     len = min(len, cbuf->size - (cbuf->in-cbuf->out));     			//保证写入长度 <= 空闲空间大小
     u32 L = min(len, cbuf->size - (cbuf->in & (cbuf->size - 1)));       // size - in&(sie-1)in到缓冲区尾部的距离
     memcpy(cbuf->buffer + (cbuf->in&(cbuf->size-1)) , data_in, L);
@@ -28,9 +31,11 @@ u32 put_fifo(cbuft *cbuf, const u8* data_in, u32 len)
 /*
 ** 读数据
 */
-u32 get_fifo(cbuft *cbuf, const u8* data_out, u32 len)
+u32 get_fifo(cbuft *cbuf,  u8* data_out, u32 len)
 {
-
+    if((cbuf == NULL)||(data_out == NULL)||(len==0)){
+        return 0;
+    }
      len = min(len , cbuf->in - cbuf->out);
      u32 L = min(len,cbuf->size - (cbuf->out &(cbuf->size - 1) ));
 
@@ -45,9 +50,11 @@ u32 get_fifo(cbuft *cbuf, const u8* data_out, u32 len)
 /**
 ** 循环提取buf中的数据  不删除数据
 */
-void get_lcd_data_roll(cbuft *cbuf, const u8* data_out, u32 len)
+u32 get_fifo_roll(cbuft *cbuf,  u8* data_out, u32 len)
 {
-
+    if((cbuf == NULL)||(data_out == NULL)||(len==0)){
+        return 0;
+    }
     u32 L = min(len,cbuf->size - cbuf->out);
     if((cbuf->out+1) >=  cbuf->size)
         cbuf->out = 0;
@@ -58,9 +65,15 @@ void get_lcd_data_roll(cbuft *cbuf, const u8* data_out, u32 len)
 }
 
 
-
+/*
+ * size:只能是2的几次幂
+ */
 void cbuffer_init(cbuft *cbuf,u8 *buf, u32 size)
 {
+    if(size&(size-1) != 0){
+        //size不是2的几次幂
+        while(1);
+    }
     cbuf->buffer = buf;
     cbuf->in = 0;
     cbuf->out = 0;

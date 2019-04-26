@@ -1,0 +1,376 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CKSUM_ADD	.\TinyFrame-master\TinyFrame.c	205;"	d	language:C	file:
+CKSUM_FINALIZE	.\TinyFrame-master\TinyFrame.c	206;"	d	language:C	file:
+CKSUM_RESET	.\TinyFrame-master\TinyFrame.c	204;"	d	language:C	file:
+COLLECT_NUMBER	.\TinyFrame-master\TinyFrame.c	595;"	d	language:C	file:
+PAYLOAD_BUILDER_H	.\TinyFrame-master\utilities\payload_builder.h	2;"	d	language:C++
+PAYLOAD_PARSER_H	.\TinyFrame-master\utilities\payload_parser.h	2;"	d	language:C++
+PORT	.\TinyFrame-master\demo\demo.h	12;"	d	language:C++
+PayloadBuilder	.\TinyFrame-master\utilities\payload_builder.h	/^typedef struct PayloadBuilder_ PayloadBuilder;$/;"	t	language:C++	typeref:struct:PayloadBuilder_
+PayloadBuilder_	.\TinyFrame-master\utilities\payload_builder.h	/^struct PayloadBuilder_ {$/;"	s	language:C++
+PayloadParser	.\TinyFrame-master\utilities\payload_parser.h	/^typedef struct PayloadParser_ PayloadParser;$/;"	t	language:C++	typeref:struct:PayloadParser_
+PayloadParser_	.\TinyFrame-master\utilities\payload_parser.h	/^struct PayloadParser_ {$/;"	s	language:C++
+TFState_DATA	.\TinyFrame-master\TinyFrame.h	/^    TFState_DATA,         \/\/!< Receive payload$/;"	e	language:C++	enum:TF_State_
+TFState_DATA_CKSUM	.\TinyFrame-master\TinyFrame.h	/^    TFState_DATA_CKSUM    \/\/!< Wait for Checksum$/;"	e	language:C++	enum:TF_State_
+TFState_HEAD_CKSUM	.\TinyFrame-master\TinyFrame.h	/^    TFState_HEAD_CKSUM,   \/\/!< Wait for header Checksum$/;"	e	language:C++	enum:TF_State_
+TFState_ID	.\TinyFrame-master\TinyFrame.h	/^    TFState_ID,           \/\/!< Wait for ID$/;"	e	language:C++	enum:TF_State_
+TFState_LEN	.\TinyFrame-master\TinyFrame.h	/^    TFState_LEN,          \/\/!< Wait for Number Of Bytes$/;"	e	language:C++	enum:TF_State_
+TFState_SOF	.\TinyFrame-master\TinyFrame.h	/^    TFState_SOF = 0,      \/\/!< Wait for SOF$/;"	e	language:C++	enum:TF_State_
+TFState_TYPE	.\TinyFrame-master\TinyFrame.h	/^    TFState_TYPE,         \/\/!< Wait for message type$/;"	e	language:C++	enum:TF_State_
+TF_Accept	.\TinyFrame-master\TinyFrame.c	/^void _TF_FN TF_Accept(TinyFrame *tf, const uint8_t *buffer, uint32_t count)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buffer, uint32_t count)
+TF_AcceptChar	.\TinyFrame-master\TinyFrame.c	/^void _TF_FN TF_AcceptChar(TinyFrame *tf, unsigned char c)$/;"	f	language:C	signature:(TinyFrame *tf, unsigned char c)
+TF_AddGenericListener	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_AddGenericListener(TinyFrame *tf, TF_Listener cb)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Listener cb)
+TF_AddIdListener	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_AddIdListener(TinyFrame *tf, TF_Msg *msg, TF_Listener cb, TF_TICKS timeout)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg, TF_Listener cb, TF_TICKS timeout)
+TF_AddTypeListener	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_AddTypeListener(TinyFrame *tf, TF_TYPE frame_type, TF_Listener cb)$/;"	f	language:C	signature:(TinyFrame *tf, TF_TYPE frame_type, TF_Listener cb)
+TF_CKSUM	.\TinyFrame-master\TinyFrame.h	/^    typedef uint16_t TF_CKSUM;$/;"	t	language:C++
+TF_CKSUM	.\TinyFrame-master\TinyFrame.h	/^    typedef uint32_t TF_CKSUM;$/;"	t	language:C++
+TF_CKSUM	.\TinyFrame-master\TinyFrame.h	/^    typedef uint8_t TF_CKSUM;$/;"	t	language:C++
+TF_CKSUM_CRC16	.\TinyFrame-master\TinyFrame.h	26;"	d	language:C++
+TF_CKSUM_CRC32	.\TinyFrame-master\TinyFrame.h	27;"	d	language:C++
+TF_CKSUM_CRC8	.\TinyFrame-master\TinyFrame.h	25;"	d	language:C++
+TF_CKSUM_CUSTOM16	.\TinyFrame-master\TinyFrame.h	29;"	d	language:C++
+TF_CKSUM_CUSTOM32	.\TinyFrame-master\TinyFrame.h	30;"	d	language:C++
+TF_CKSUM_CUSTOM8	.\TinyFrame-master\TinyFrame.h	28;"	d	language:C++
+TF_CKSUM_NONE	.\TinyFrame-master\TinyFrame.h	23;"	d	language:C++
+TF_CKSUM_TYPE	.\TinyFrame-master\TF_Config.example.h	36;"	d	language:C++
+TF_CKSUM_TYPE	.\TinyFrame-master\demo\simple\TF_Config.h	14;"	d	language:C++
+TF_CKSUM_TYPE	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	14;"	d	language:C++
+TF_CKSUM_TYPE	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	14;"	d	language:C++
+TF_CKSUM_TYPE	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	14;"	d	language:C++
+TF_CKSUM_TYPE	.\TinyFrame-master\demo\socket_demo\TF_Config.h	14;"	d	language:C++
+TF_CKSUM_XOR	.\TinyFrame-master\TinyFrame.h	24;"	d	language:C++
+TF_CLOSE	.\TinyFrame-master\TinyFrame.h	/^    TF_CLOSE = 3,  \/\/!< Handled, remove self$/;"	e	language:C++	enum:__anon2
+TF_CONFIG_H	.\TinyFrame-master\TF_Config.example.h	8;"	d	language:C++
+TF_CONFIG_H	.\TinyFrame-master\demo\simple\TF_Config.h	6;"	d	language:C++
+TF_CONFIG_H	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	6;"	d	language:C++
+TF_CONFIG_H	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	6;"	d	language:C++
+TF_CONFIG_H	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	6;"	d	language:C++
+TF_CONFIG_H	.\TinyFrame-master\demo\socket_demo\TF_Config.h	6;"	d	language:C++
+TF_COUNT	.\TinyFrame-master\TF_Config.example.h	/^typedef uint8_t TF_COUNT;$/;"	t	language:C++
+TF_COUNT	.\TinyFrame-master\demo\simple\TF_Config.h	/^typedef uint8_t TF_COUNT;$/;"	t	language:C++
+TF_COUNT	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	/^typedef uint8_t TF_COUNT;$/;"	t	language:C++
+TF_COUNT	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	/^typedef uint8_t TF_COUNT;$/;"	t	language:C++
+TF_COUNT	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	/^typedef uint8_t TF_COUNT;$/;"	t	language:C++
+TF_COUNT	.\TinyFrame-master\demo\socket_demo\TF_Config.h	/^typedef uint8_t TF_COUNT;$/;"	t	language:C++
+TF_CksumAdd	.\TinyFrame-master\TF_Integration.example.c	/^TF_CKSUM TF_CksumAdd(TF_CKSUM cksum, uint8_t byte)$/;"	f	language:C	signature:(TF_CKSUM cksum, uint8_t byte)
+TF_CksumAdd	.\TinyFrame-master\TinyFrame.c	/^    static TF_CKSUM TF_CksumAdd(TF_CKSUM cksum, uint8_t byte)$/;"	f	language:C	file:	signature:(TF_CKSUM cksum, uint8_t byte)
+TF_CksumAdd	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^TF_CKSUM TF_CksumAdd(TF_CKSUM cksum, uint8_t byte)$/;"	f	language:C	signature:(TF_CKSUM cksum, uint8_t byte)
+TF_CksumEnd	.\TinyFrame-master\TF_Integration.example.c	/^TF_CKSUM TF_CksumEnd(TF_CKSUM cksum)$/;"	f	language:C	signature:(TF_CKSUM cksum)
+TF_CksumEnd	.\TinyFrame-master\TinyFrame.c	/^    static TF_CKSUM TF_CksumEnd(TF_CKSUM cksum)$/;"	f	language:C	file:	signature:(TF_CKSUM cksum)
+TF_CksumEnd	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^TF_CKSUM TF_CksumEnd(TF_CKSUM cksum)$/;"	f	language:C	signature:(TF_CKSUM cksum)
+TF_CksumStart	.\TinyFrame-master\TF_Integration.example.c	/^TF_CKSUM TF_CksumStart(void)$/;"	f	language:C	signature:(void)
+TF_CksumStart	.\TinyFrame-master\TinyFrame.c	/^    static TF_CKSUM TF_CksumStart(void)$/;"	f	language:C	file:	signature:(void)
+TF_CksumStart	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^TF_CKSUM TF_CksumStart(void)$/;"	f	language:C	signature:(void)
+TF_ClaimTx	.\TinyFrame-master\TF_Integration.example.c	/^bool TF_ClaimTx(TinyFrame *tf)$/;"	f	language:C	signature:(TinyFrame *tf)
+TF_ClaimTx	.\TinyFrame-master\TinyFrame.c	/^    static bool TF_ClaimTx(TinyFrame *tf) {$/;"	f	language:C	file:	signature:(TinyFrame *tf)
+TF_ClearMsg	.\TinyFrame-master\TinyFrame.h	/^static inline void TF_ClearMsg(TF_Msg *msg)$/;"	f	language:C++	signature:(TF_Msg *msg)
+TF_ComposeBody	.\TinyFrame-master\TinyFrame.c	/^static inline uint32_t _TF_FN TF_ComposeBody(uint8_t *outbuff,$/;"	f	language:C	file:	signature:(uint8_t *outbuff, const uint8_t *data, TF_LEN data_len, TF_CKSUM *cksum)
+TF_ComposeHead	.\TinyFrame-master\TinyFrame.c	/^static inline uint32_t _TF_FN TF_ComposeHead(TinyFrame *tf, uint8_t *outbuff, TF_Msg *msg)$/;"	f	language:C	file:	signature:(TinyFrame *tf, uint8_t *outbuff, TF_Msg *msg)
+TF_ComposeTail	.\TinyFrame-master\TinyFrame.c	/^static inline uint32_t _TF_FN TF_ComposeTail(uint8_t *outbuff, TF_CKSUM *cksum)$/;"	f	language:C	file:	signature:(uint8_t *outbuff, TF_CKSUM *cksum)
+TF_DEMO_H	.\TinyFrame-master\demo\demo.h	6;"	d	language:C++
+TF_DeInit	.\TinyFrame-master\TinyFrame.c	/^void TF_DeInit(TinyFrame *tf)$/;"	f	language:C	signature:(TinyFrame *tf)
+TF_Error	.\TinyFrame-master\TF_Config.example.h	77;"	d	language:C++
+TF_Error	.\TinyFrame-master\demo\simple\TF_Config.h	26;"	d	language:C++
+TF_Error	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	26;"	d	language:C++
+TF_Error	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	26;"	d	language:C++
+TF_Error	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	26;"	d	language:C++
+TF_Error	.\TinyFrame-master\demo\socket_demo\TF_Config.h	26;"	d	language:C++
+TF_GenericListener_	.\TinyFrame-master\TinyFrame.h	/^struct TF_GenericListener_ {$/;"	s	language:C++
+TF_HandleReceivedMessage	.\TinyFrame-master\TinyFrame.c	/^static void _TF_FN TF_HandleReceivedMessage(TinyFrame *tf)$/;"	f	language:C	file:	signature:(TinyFrame *tf)
+TF_ID	.\TinyFrame-master\TinyFrame.h	/^    typedef uint16_t TF_ID;$/;"	t	language:C++
+TF_ID	.\TinyFrame-master\TinyFrame.h	/^    typedef uint32_t TF_ID;$/;"	t	language:C++
+TF_ID	.\TinyFrame-master\TinyFrame.h	/^    typedef uint8_t TF_ID;$/;"	t	language:C++
+TF_ID_BYTES	.\TinyFrame-master\TF_Config.example.h	28;"	d	language:C++
+TF_ID_BYTES	.\TinyFrame-master\demo\simple\TF_Config.h	11;"	d	language:C++
+TF_ID_BYTES	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	11;"	d	language:C++
+TF_ID_BYTES	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	11;"	d	language:C++
+TF_ID_BYTES	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	11;"	d	language:C++
+TF_ID_BYTES	.\TinyFrame-master\demo\socket_demo\TF_Config.h	11;"	d	language:C++
+TF_ID_MASK	.\TinyFrame-master\TinyFrame.c	20;"	d	language:C	file:
+TF_ID_PEERBIT	.\TinyFrame-master\TinyFrame.c	21;"	d	language:C	file:
+TF_IdListener_	.\TinyFrame-master\TinyFrame.h	/^struct TF_IdListener_ {$/;"	s	language:C++
+TF_Init	.\TinyFrame-master\TinyFrame.c	/^TinyFrame * _TF_FN TF_Init(TF_Peer peer_bit)$/;"	f	language:C	signature:(TF_Peer peer_bit)
+TF_InitStatic	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_InitStatic(TinyFrame *tf, TF_Peer peer_bit)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Peer peer_bit)
+TF_LEN	.\TinyFrame-master\TinyFrame.h	/^    typedef uint16_t TF_LEN;$/;"	t	language:C++
+TF_LEN	.\TinyFrame-master\TinyFrame.h	/^    typedef uint32_t TF_LEN;$/;"	t	language:C++
+TF_LEN	.\TinyFrame-master\TinyFrame.h	/^    typedef uint8_t TF_LEN;$/;"	t	language:C++
+TF_LEN_BYTES	.\TinyFrame-master\TF_Config.example.h	29;"	d	language:C++
+TF_LEN_BYTES	.\TinyFrame-master\demo\simple\TF_Config.h	12;"	d	language:C++
+TF_LEN_BYTES	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	12;"	d	language:C++
+TF_LEN_BYTES	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	12;"	d	language:C++
+TF_LEN_BYTES	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	12;"	d	language:C++
+TF_LEN_BYTES	.\TinyFrame-master\demo\socket_demo\TF_Config.h	12;"	d	language:C++
+TF_Listener	.\TinyFrame-master\TinyFrame.h	/^typedef TF_Result (*TF_Listener)(TinyFrame *tf, TF_Msg *msg);$/;"	t	language:C++
+TF_MASTER	.\TinyFrame-master\TinyFrame.h	/^    TF_MASTER = 1,$/;"	e	language:C++	enum:__anon1
+TF_MAX_GEN_LST	.\TinyFrame-master\TF_Config.example.h	67;"	d	language:C++
+TF_MAX_GEN_LST	.\TinyFrame-master\demo\simple\TF_Config.h	23;"	d	language:C++
+TF_MAX_GEN_LST	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	23;"	d	language:C++
+TF_MAX_GEN_LST	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	23;"	d	language:C++
+TF_MAX_GEN_LST	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	23;"	d	language:C++
+TF_MAX_GEN_LST	.\TinyFrame-master\demo\socket_demo\TF_Config.h	23;"	d	language:C++
+TF_MAX_ID_LST	.\TinyFrame-master\TF_Config.example.h	63;"	d	language:C++
+TF_MAX_ID_LST	.\TinyFrame-master\demo\simple\TF_Config.h	21;"	d	language:C++
+TF_MAX_ID_LST	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	21;"	d	language:C++
+TF_MAX_ID_LST	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	21;"	d	language:C++
+TF_MAX_ID_LST	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	21;"	d	language:C++
+TF_MAX_ID_LST	.\TinyFrame-master\demo\socket_demo\TF_Config.h	21;"	d	language:C++
+TF_MAX_PAYLOAD_RX	.\TinyFrame-master\TF_Config.example.h	55;"	d	language:C++
+TF_MAX_PAYLOAD_RX	.\TinyFrame-master\demo\simple\TF_Config.h	19;"	d	language:C++
+TF_MAX_PAYLOAD_RX	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	19;"	d	language:C++
+TF_MAX_PAYLOAD_RX	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	19;"	d	language:C++
+TF_MAX_PAYLOAD_RX	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	19;"	d	language:C++
+TF_MAX_PAYLOAD_RX	.\TinyFrame-master\demo\socket_demo\TF_Config.h	19;"	d	language:C++
+TF_MAX_TYPE_LST	.\TinyFrame-master\TF_Config.example.h	65;"	d	language:C++
+TF_MAX_TYPE_LST	.\TinyFrame-master\demo\simple\TF_Config.h	22;"	d	language:C++
+TF_MAX_TYPE_LST	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	22;"	d	language:C++
+TF_MAX_TYPE_LST	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	22;"	d	language:C++
+TF_MAX_TYPE_LST	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	22;"	d	language:C++
+TF_MAX_TYPE_LST	.\TinyFrame-master\demo\socket_demo\TF_Config.h	22;"	d	language:C++
+TF_MIN	.\TinyFrame-master\TinyFrame.c	15;"	d	language:C	file:
+TF_Msg	.\TinyFrame-master\TinyFrame.h	/^} TF_Msg;$/;"	t	language:C++	typeref:struct:TF_Msg_
+TF_Msg_	.\TinyFrame-master\TinyFrame.h	/^typedef struct TF_Msg_ {$/;"	s	language:C++
+TF_Multipart_Close	.\TinyFrame-master\TinyFrame.c	/^void _TF_FN TF_Multipart_Close(TinyFrame *tf)$/;"	f	language:C	signature:(TinyFrame *tf)
+TF_Multipart_Payload	.\TinyFrame-master\TinyFrame.c	/^void _TF_FN TF_Multipart_Payload(TinyFrame *tf, const uint8_t *buff, uint32_t length)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t length)
+TF_NEXT	.\TinyFrame-master\TinyFrame.h	/^    TF_NEXT = 0,   \/\/!< Not handled, let other listeners handle it$/;"	e	language:C++	enum:__anon2
+TF_PARSER_TIMEOUT_TICKS	.\TinyFrame-master\TF_Config.example.h	71;"	d	language:C++
+TF_PARSER_TIMEOUT_TICKS	.\TinyFrame-master\demo\simple\TF_Config.h	24;"	d	language:C++
+TF_PARSER_TIMEOUT_TICKS	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	24;"	d	language:C++
+TF_PARSER_TIMEOUT_TICKS	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	24;"	d	language:C++
+TF_PARSER_TIMEOUT_TICKS	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	24;"	d	language:C++
+TF_PARSER_TIMEOUT_TICKS	.\TinyFrame-master\demo\socket_demo\TF_Config.h	24;"	d	language:C++
+TF_Peer	.\TinyFrame-master\TinyFrame.h	/^} TF_Peer;$/;"	t	language:C++	typeref:enum:__anon1
+TF_Query	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_Query(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)
+TF_QuerySimple	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_QuerySimple(TinyFrame *tf, TF_TYPE type, const uint8_t *data, TF_LEN len, TF_Listener listener, TF_TICKS timeout)$/;"	f	language:C	signature:(TinyFrame *tf, TF_TYPE type, const uint8_t *data, TF_LEN len, TF_Listener listener, TF_TICKS timeout)
+TF_QuerySimple_Multipart	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_QuerySimple_Multipart(TinyFrame *tf, TF_TYPE type, TF_LEN len, TF_Listener listener, TF_TICKS timeout)$/;"	f	language:C	signature:(TinyFrame *tf, TF_TYPE type, TF_LEN len, TF_Listener listener, TF_TICKS timeout)
+TF_Query_Multipart	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_Query_Multipart(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)
+TF_RENEW	.\TinyFrame-master\TinyFrame.h	/^    TF_RENEW = 2,  \/\/!< Handled, stay, renew - useful only with listener timeout$/;"	e	language:C++	enum:__anon2
+TF_ReleaseTx	.\TinyFrame-master\TF_Integration.example.c	/^void TF_ReleaseTx(TinyFrame *tf)$/;"	f	language:C	signature:(TinyFrame *tf)
+TF_ReleaseTx	.\TinyFrame-master\TinyFrame.c	/^    static void TF_ReleaseTx(TinyFrame *tf)$/;"	f	language:C	file:	signature:(TinyFrame *tf)
+TF_RemoveGenericListener	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_RemoveGenericListener(TinyFrame *tf, TF_Listener cb)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Listener cb)
+TF_RemoveIdListener	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_RemoveIdListener(TinyFrame *tf, TF_ID frame_id)$/;"	f	language:C	signature:(TinyFrame *tf, TF_ID frame_id)
+TF_RemoveTypeListener	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_RemoveTypeListener(TinyFrame *tf, TF_TYPE type)$/;"	f	language:C	signature:(TinyFrame *tf, TF_TYPE type)
+TF_RenewIdListener	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_RenewIdListener(TinyFrame *tf, TF_ID id)$/;"	f	language:C	signature:(TinyFrame *tf, TF_ID id)
+TF_ResetParser	.\TinyFrame-master\TinyFrame.c	/^void _TF_FN TF_ResetParser(TinyFrame *tf)$/;"	f	language:C	signature:(TinyFrame *tf)
+TF_Respond	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_Respond(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+TF_Respond_Multipart	.\TinyFrame-master\TinyFrame.c	/^void _TF_FN TF_Respond_Multipart(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+TF_Result	.\TinyFrame-master\TinyFrame.h	/^} TF_Result;$/;"	t	language:C++	typeref:enum:__anon2
+TF_SENDBUF_LEN	.\TinyFrame-master\TF_Config.example.h	58;"	d	language:C++
+TF_SENDBUF_LEN	.\TinyFrame-master\demo\simple\TF_Config.h	20;"	d	language:C++
+TF_SENDBUF_LEN	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	20;"	d	language:C++
+TF_SENDBUF_LEN	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	20;"	d	language:C++
+TF_SENDBUF_LEN	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	20;"	d	language:C++
+TF_SENDBUF_LEN	.\TinyFrame-master\demo\socket_demo\TF_Config.h	20;"	d	language:C++
+TF_SLAVE	.\TinyFrame-master\TinyFrame.h	/^    TF_SLAVE = 0,$/;"	e	language:C++	enum:__anon1
+TF_SOF_BYTE	.\TinyFrame-master\TF_Config.example.h	41;"	d	language:C++
+TF_SOF_BYTE	.\TinyFrame-master\demo\simple\TF_Config.h	16;"	d	language:C++
+TF_SOF_BYTE	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	16;"	d	language:C++
+TF_SOF_BYTE	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	16;"	d	language:C++
+TF_SOF_BYTE	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	16;"	d	language:C++
+TF_SOF_BYTE	.\TinyFrame-master\demo\socket_demo\TF_Config.h	16;"	d	language:C++
+TF_STAY	.\TinyFrame-master\TinyFrame.h	/^    TF_STAY = 1,   \/\/!< Handled, stay$/;"	e	language:C++	enum:__anon2
+TF_Send	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_Send(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+TF_SendFrame	.\TinyFrame-master\TinyFrame.c	/^static bool _TF_FN TF_SendFrame(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)$/;"	f	language:C	file:	signature:(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)
+TF_SendFrame_Begin	.\TinyFrame-master\TinyFrame.c	/^static bool _TF_FN TF_SendFrame_Begin(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)$/;"	f	language:C	file:	signature:(TinyFrame *tf, TF_Msg *msg, TF_Listener listener, TF_TICKS timeout)
+TF_SendFrame_Chunk	.\TinyFrame-master\TinyFrame.c	/^static void _TF_FN TF_SendFrame_Chunk(TinyFrame *tf, const uint8_t *buff, uint32_t length)$/;"	f	language:C	file:	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t length)
+TF_SendFrame_End	.\TinyFrame-master\TinyFrame.c	/^static void _TF_FN TF_SendFrame_End(TinyFrame *tf)$/;"	f	language:C	file:	signature:(TinyFrame *tf)
+TF_SendSimple	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_SendSimple(TinyFrame *tf, TF_TYPE type, const uint8_t *data, TF_LEN len)$/;"	f	language:C	signature:(TinyFrame *tf, TF_TYPE type, const uint8_t *data, TF_LEN len)
+TF_SendSimple_Multipart	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_SendSimple_Multipart(TinyFrame *tf, TF_TYPE type, TF_LEN len)$/;"	f	language:C	signature:(TinyFrame *tf, TF_TYPE type, TF_LEN len)
+TF_Send_Multipart	.\TinyFrame-master\TinyFrame.c	/^bool _TF_FN TF_Send_Multipart(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+TF_State_	.\TinyFrame-master\TinyFrame.h	/^enum TF_State_ {$/;"	g	language:C++
+TF_TICKS	.\TinyFrame-master\TF_Config.example.h	/^typedef uint16_t TF_TICKS;$/;"	t	language:C++
+TF_TICKS	.\TinyFrame-master\demo\simple\TF_Config.h	/^typedef uint16_t TF_TICKS;$/;"	t	language:C++
+TF_TICKS	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	/^typedef uint16_t TF_TICKS;$/;"	t	language:C++
+TF_TICKS	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	/^typedef uint16_t TF_TICKS;$/;"	t	language:C++
+TF_TICKS	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	/^typedef uint16_t TF_TICKS;$/;"	t	language:C++
+TF_TICKS	.\TinyFrame-master\demo\socket_demo\TF_Config.h	/^typedef uint16_t TF_TICKS;$/;"	t	language:C++
+TF_TRY	.\TinyFrame-master\TinyFrame.c	16;"	d	language:C	file:
+TF_TYPE	.\TinyFrame-master\TinyFrame.h	/^    typedef uint16_t TF_TYPE;$/;"	t	language:C++
+TF_TYPE	.\TinyFrame-master\TinyFrame.h	/^    typedef uint32_t TF_TYPE;$/;"	t	language:C++
+TF_TYPE	.\TinyFrame-master\TinyFrame.h	/^    typedef uint8_t TF_TYPE;$/;"	t	language:C++
+TF_TYPE_BYTES	.\TinyFrame-master\TF_Config.example.h	30;"	d	language:C++
+TF_TYPE_BYTES	.\TinyFrame-master\demo\simple\TF_Config.h	13;"	d	language:C++
+TF_TYPE_BYTES	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	13;"	d	language:C++
+TF_TYPE_BYTES	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	13;"	d	language:C++
+TF_TYPE_BYTES	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	13;"	d	language:C++
+TF_TYPE_BYTES	.\TinyFrame-master\demo\socket_demo\TF_Config.h	13;"	d	language:C++
+TF_Tick	.\TinyFrame-master\TinyFrame.c	/^void _TF_FN TF_Tick(TinyFrame *tf)$/;"	f	language:C	signature:(TinyFrame *tf)
+TF_TypeListener_	.\TinyFrame-master\TinyFrame.h	/^struct TF_TypeListener_ {$/;"	s	language:C++
+TF_USE_MUTEX	.\TinyFrame-master\TF_Config.example.h	74;"	d	language:C++
+TF_USE_SOF_BYTE	.\TinyFrame-master\TF_Config.example.h	39;"	d	language:C++
+TF_USE_SOF_BYTE	.\TinyFrame-master\demo\simple\TF_Config.h	15;"	d	language:C++
+TF_USE_SOF_BYTE	.\TinyFrame-master\demo\simple_custom_cksum\TF_Config.h	15;"	d	language:C++
+TF_USE_SOF_BYTE	.\TinyFrame-master\demo\simple_long_payload\TF_Config.h	15;"	d	language:C++
+TF_USE_SOF_BYTE	.\TinyFrame-master\demo\simple_multipart\TF_Config.h	15;"	d	language:C++
+TF_USE_SOF_BYTE	.\TinyFrame-master\demo\socket_demo\TF_Config.h	15;"	d	language:C++
+TF_UTILS_H	.\TinyFrame-master\demo\utils.h	6;"	d	language:C++
+TF_VERSION	.\TinyFrame-master\TinyFrame.h	13;"	d	language:C++
+TF_WriteImpl	.\TinyFrame-master\TF_Integration.example.c	/^void TF_WriteImpl(TinyFrame *tf, const uint8_t *buff, uint32_t len)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t len)
+TF_WriteImpl	.\TinyFrame-master\demo\demo.c	/^void TF_WriteImpl(TinyFrame *tf, const uint8_t *buff, uint32_t len)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t len)
+TF_WriteImpl	.\TinyFrame-master\demo\simple\test.c	/^void TF_WriteImpl(TinyFrame *tf, const uint8_t *buff, uint32_t len)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t len)
+TF_WriteImpl	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^void TF_WriteImpl(TinyFrame *tf, const uint8_t *buff, uint32_t len)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t len)
+TF_WriteImpl	.\TinyFrame-master\demo\simple_long_payload\test.c	/^void TF_WriteImpl(TinyFrame *tf, const uint8_t *buff, uint32_t len)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t len)
+TF_WriteImpl	.\TinyFrame-master\demo\simple_multipart\test.c	/^void TF_WriteImpl(TinyFrame *tf, const uint8_t *buff, uint32_t len)$/;"	f	language:C	signature:(TinyFrame *tf, const uint8_t *buff, uint32_t len)
+TYPE_COERCE_H	.\TinyFrame-master\utilities\type_coerce.h	2;"	d	language:C++
+TinyFrame	.\TinyFrame-master\TinyFrame.h	/^typedef struct TinyFrame_ TinyFrame;$/;"	t	language:C++	typeref:struct:TinyFrame_
+TinyFrameH	.\TinyFrame-master\TinyFrame.h	2;"	d	language:C++
+TinyFrame_	.\TinyFrame-master\TinyFrame.h	/^struct TinyFrame_ {$/;"	s	language:C++
+WRITENUM	.\TinyFrame-master\TinyFrame.c	752;"	d	language:C	file:
+WRITENUM_BASE	.\TinyFrame-master\TinyFrame.c	734;"	d	language:C	file:
+WRITENUM_CKSUM	.\TinyFrame-master\TinyFrame.c	760;"	d	language:C	file:
+_GNU_SOURCE	.\TinyFrame-master\demo\demo.c	8;"	d	language:C	file:
+_NOOP	.\TinyFrame-master\TinyFrame.c	744;"	d	language:C	file:
+_TF_FN	.\TinyFrame-master\TinyFrame.c	10;"	d	language:C	file:
+_TF_FN	.\TinyFrame-master\TinyFrame.c	8;"	d	language:C	file:
+__USE_GNU	.\TinyFrame-master\demo\demo.c	9;"	d	language:C	file:
+bigendian	.\TinyFrame-master\utilities\payload_builder.h	/^    bool bigendian;   \/\/!< Flag to use big-endian parsing$/;"	m	language:C++	struct:PayloadBuilder_
+bigendian	.\TinyFrame-master\utilities\payload_parser.h	/^    bool bigendian;   \/\/!< Flag to use big-endian parsing$/;"	m	language:C++	struct:PayloadParser_
+cksum	.\TinyFrame-master\TinyFrame.h	/^    TF_CKSUM cksum;         \/\/!< Checksum calculated of the data stream$/;"	m	language:C++	struct:TinyFrame_
+cleanup_generic_listener	.\TinyFrame-master\TinyFrame.c	/^static inline void _TF_FN cleanup_generic_listener(TinyFrame *tf, TF_COUNT i, struct TF_GenericListener_ *lst)$/;"	f	language:C	file:	signature:(TinyFrame *tf, TF_COUNT i, struct TF_GenericListener_ *lst)
+cleanup_id_listener	.\TinyFrame-master\TinyFrame.c	/^static void _TF_FN cleanup_id_listener(TinyFrame *tf, TF_COUNT i, struct TF_IdListener_ *lst)$/;"	f	language:C	file:	signature:(TinyFrame *tf, TF_COUNT i, struct TF_IdListener_ *lst)
+cleanup_type_listener	.\TinyFrame-master\TinyFrame.c	/^static inline void _TF_FN cleanup_type_listener(TinyFrame *tf, TF_COUNT i, struct TF_TypeListener_ *lst)$/;"	f	language:C	file:	signature:(TinyFrame *tf, TF_COUNT i, struct TF_TypeListener_ *lst)
+conn_disband	.\TinyFrame-master\demo\demo.c	/^volatile bool conn_disband = false;$/;"	v	language:C
+conv16	.\TinyFrame-master\utilities\type_coerce.h	/^union conv16 {$/;"	u	language:C++
+conv32	.\TinyFrame-master\utilities\type_coerce.h	/^union conv32 {$/;"	u	language:C++
+conv8	.\TinyFrame-master\utilities\type_coerce.h	/^union conv8 {$/;"	u	language:C++
+count_generic_lst	.\TinyFrame-master\TinyFrame.h	/^    TF_COUNT count_generic_lst;$/;"	m	language:C++	struct:TinyFrame_
+count_id_lst	.\TinyFrame-master\TinyFrame.h	/^    TF_COUNT count_id_lst;$/;"	m	language:C++	struct:TinyFrame_
+count_type_lst	.\TinyFrame-master\TinyFrame.h	/^    TF_COUNT count_type_lst;$/;"	m	language:C++	struct:TinyFrame_
+crc16_table	.\TinyFrame-master\TinyFrame.c	/^    static const uint16_t crc16_table[256] = {$/;"	v	language:C	file:
+crc32_table	.\TinyFrame-master\TinyFrame.c	/^    static const uint32_t crc32_table[] = { \/* CRC polynomial 0xedb88320 *\/$/;"	v	language:C	file:
+crc8_bits	.\TinyFrame-master\TinyFrame.c	/^    static inline uint8_t crc8_bits(uint8_t data)$/;"	f	language:C	file:	signature:(uint8_t data)
+current	.\TinyFrame-master\utilities\payload_builder.h	/^    uint8_t *current; \/\/!< Pointer to the next byte to be read$/;"	m	language:C++	struct:PayloadBuilder_
+current	.\TinyFrame-master\utilities\payload_parser.h	/^    uint8_t *current; \/\/!< Pointer to the next byte to be read$/;"	m	language:C++	struct:PayloadParser_
+data	.\TinyFrame-master\TinyFrame.h	/^    const uint8_t *data;$/;"	m	language:C++	struct:TF_Msg_
+data	.\TinyFrame-master\TinyFrame.h	/^    uint8_t data[TF_MAX_PAYLOAD_RX]; \/\/!< Data byte buffer$/;"	m	language:C++	struct:TinyFrame_
+demo_client	.\TinyFrame-master\demo\demo.c	/^static int demo_client(void *unused)$/;"	f	language:C	file:	signature:(void *unused)
+demo_disconn	.\TinyFrame-master\demo\demo.c	/^void demo_disconn(void)$/;"	f	language:C	signature:(void)
+demo_init	.\TinyFrame-master\demo\demo.c	/^void demo_init(TF_Peer peer)$/;"	f	language:C	signature:(TF_Peer peer)
+demo_server	.\TinyFrame-master\demo\demo.c	/^static int demo_server(void *unused)$/;"	f	language:C	file:	signature:(void *unused)
+demo_sleep	.\TinyFrame-master\demo\demo.c	/^void demo_sleep(void)$/;"	f	language:C	signature:(void)
+demo_tf	.\TinyFrame-master\demo\demo.c	/^TinyFrame *demo_tf;$/;"	v	language:C
+demo_tf	.\TinyFrame-master\demo\simple\test.c	/^TinyFrame *demo_tf;$/;"	v	language:C
+demo_tf	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^TinyFrame *demo_tf;$/;"	v	language:C
+demo_tf	.\TinyFrame-master\demo\simple_long_payload\test.c	/^TinyFrame *demo_tf;$/;"	v	language:C
+demo_tf	.\TinyFrame-master\demo\simple_multipart\test.c	/^TinyFrame *demo_tf;$/;"	v	language:C
+discard_data	.\TinyFrame-master\TinyFrame.h	/^    bool discard_data;      \/\/!< Set if (len > TF_MAX_PAYLOAD) to read the frame, but ignore the data.$/;"	m	language:C++	struct:TinyFrame_
+do_corrupt	.\TinyFrame-master\demo\simple\test.c	/^bool do_corrupt = false;$/;"	v	language:C
+do_corrupt	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^bool do_corrupt = false;$/;"	v	language:C
+dumpFrame	.\TinyFrame-master\demo\utils.c	/^void dumpFrame(const uint8_t *buff, size_t len)$/;"	f	language:C	signature:(const uint8_t *buff, size_t len)
+dumpFrameInfo	.\TinyFrame-master\demo\utils.c	/^void dumpFrameInfo(TF_Msg *msg)$/;"	f	language:C	signature:(TF_Msg *msg)
+empty_handler	.\TinyFrame-master\utilities\payload_parser.h	/^    pp_empty_handler empty_handler; \/\/!< Callback for buffer underrun$/;"	m	language:C++	struct:PayloadParser_
+end	.\TinyFrame-master\utilities\payload_builder.h	/^    uint8_t *end;     \/\/!< Pointer to the end of the buffer (start + length)$/;"	m	language:C++	struct:PayloadBuilder_
+end	.\TinyFrame-master\utilities\payload_parser.h	/^    uint8_t *end;     \/\/!< Pointer to the end of the buffer (start + length)$/;"	m	language:C++	struct:PayloadParser_
+f32	.\TinyFrame-master\utilities\type_coerce.h	/^    float f32;$/;"	m	language:C++	union:conv32
+fn	.\TinyFrame-master\TinyFrame.h	/^    TF_Listener fn;$/;"	m	language:C++	struct:TF_GenericListener_
+fn	.\TinyFrame-master\TinyFrame.h	/^    TF_Listener fn;$/;"	m	language:C++	struct:TF_IdListener_
+fn	.\TinyFrame-master\TinyFrame.h	/^    TF_Listener fn;$/;"	m	language:C++	struct:TF_TypeListener_
+frame_id	.\TinyFrame-master\TinyFrame.h	/^    TF_ID frame_id;       \/\/!< message ID$/;"	m	language:C++	struct:TF_Msg_
+full_handler	.\TinyFrame-master\utilities\payload_builder.h	/^    pb_full_handler full_handler; \/\/!< Callback for buffer overrun$/;"	m	language:C++	struct:PayloadBuilder_
+generic_listeners	.\TinyFrame-master\TinyFrame.h	/^    struct TF_GenericListener_ generic_listeners[TF_MAX_GEN_LST];$/;"	m	language:C++	struct:TinyFrame_	typeref:struct:TinyFrame_::TF_GenericListener_
+helloListener	.\TinyFrame-master\demo\socket_demo\slave.c	/^TF_Result helloListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+i16	.\TinyFrame-master\utilities\type_coerce.h	/^    int16_t i16;$/;"	m	language:C++	union:conv16
+i32	.\TinyFrame-master\utilities\type_coerce.h	/^    int32_t i32;$/;"	m	language:C++	union:conv32
+i8	.\TinyFrame-master\utilities\type_coerce.h	/^    int8_t i8;$/;"	m	language:C++	union:conv8
+id	.\TinyFrame-master\TinyFrame.h	/^    TF_ID id;               \/\/!< Incoming packet ID$/;"	m	language:C++	struct:TinyFrame_
+id	.\TinyFrame-master\TinyFrame.h	/^    TF_ID id;$/;"	m	language:C++	struct:TF_IdListener_
+id_listeners	.\TinyFrame-master\TinyFrame.h	/^    struct TF_IdListener_ id_listeners[TF_MAX_ID_LST];$/;"	m	language:C++	struct:TinyFrame_	typeref:struct:TinyFrame_::TF_IdListener_
+is_response	.\TinyFrame-master\TinyFrame.h	/^    bool is_response;     \/\/!< internal flag, set when using the Respond function. frame_id is then kept unchanged.$/;"	m	language:C++	struct:TF_Msg_
+len	.\TinyFrame-master\TinyFrame.h	/^    TF_LEN len;             \/\/!< Payload length$/;"	m	language:C++	struct:TinyFrame_
+len	.\TinyFrame-master\TinyFrame.h	/^    TF_LEN len; \/\/!< length of the payload$/;"	m	language:C++	struct:TF_Msg_
+main	.\TinyFrame-master\demo\simple\test.c	/^void main(void)$/;"	f	language:C	signature:(void)
+main	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^void main(void)$/;"	f	language:C	signature:(void)
+main	.\TinyFrame-master\demo\simple_long_payload\test.c	/^void main(void)$/;"	f	language:C	signature:(void)
+main	.\TinyFrame-master\demo\simple_multipart\test.c	/^void main(void)$/;"	f	language:C	signature:(void)
+main	.\TinyFrame-master\demo\socket_demo\master.c	/^int main(void)$/;"	f	language:C	signature:(void)
+main	.\TinyFrame-master\demo\socket_demo\slave.c	/^int main(void)$/;"	f	language:C	signature:(void)
+myListener	.\TinyFrame-master\demo\simple\test.c	/^TF_Result myListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+myListener	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^TF_Result myListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+myListener	.\TinyFrame-master\demo\simple_long_payload\test.c	/^TF_Result myListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+myListener	.\TinyFrame-master\demo\simple_multipart\test.c	/^TF_Result myListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+next_id	.\TinyFrame-master\TinyFrame.h	/^    TF_ID next_id;          \/\/!< Next frame \/ frame chain ID$/;"	m	language:C++	struct:TinyFrame_
+ok	.\TinyFrame-master\utilities\payload_builder.h	/^    bool ok;          \/\/!< Indicates that all reads were successful$/;"	m	language:C++	struct:PayloadBuilder_
+ok	.\TinyFrame-master\utilities\payload_parser.h	/^    bool ok;          \/\/!< Indicates that all reads were successful$/;"	m	language:C++	struct:PayloadParser_
+pars_begin_frame	.\TinyFrame-master\TinyFrame.c	/^static void _TF_FN pars_begin_frame(TinyFrame *tf) {$/;"	f	language:C	file:	signature:(TinyFrame *tf)
+parser_timeout_ticks	.\TinyFrame-master\TinyFrame.h	/^    TF_TICKS parser_timeout_ticks;$/;"	m	language:C++	struct:TinyFrame_
+pb_bool	.\TinyFrame-master\utilities\payload_builder.h	/^static inline bool pb_bool(PayloadBuilder *pb, bool b)$/;"	f	language:C++	signature:(PayloadBuilder *pb, bool b)
+pb_buf	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_buf(PayloadBuilder *pb, const uint8_t *buf, uint32_t len)$/;"	f	language:C	signature:(PayloadBuilder *pb, const uint8_t *buf, uint32_t len)
+pb_char	.\TinyFrame-master\utilities\payload_builder.h	/^static inline bool pb_char(PayloadBuilder *pb, char c)$/;"	f	language:C++	signature:(PayloadBuilder *pb, char c)
+pb_check_capacity	.\TinyFrame-master\utilities\payload_builder.c	4;"	d	language:C	file:
+pb_float	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_float(PayloadBuilder *pb, float f)$/;"	f	language:C	signature:(PayloadBuilder *pb, float f)
+pb_full_handler	.\TinyFrame-master\utilities\payload_builder.h	/^typedef bool (*pb_full_handler)(PayloadBuilder *pb, uint32_t needed);$/;"	t	language:C++
+pb_i16	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_i16(PayloadBuilder *pb, int16_t word)$/;"	f	language:C	signature:(PayloadBuilder *pb, int16_t word)
+pb_i32	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_i32(PayloadBuilder *pb, int32_t word)$/;"	f	language:C	signature:(PayloadBuilder *pb, int32_t word)
+pb_i8	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_i8(PayloadBuilder *pb, int8_t byte)$/;"	f	language:C	signature:(PayloadBuilder *pb, int8_t byte)
+pb_length	.\TinyFrame-master\utilities\payload_builder.h	65;"	d	language:C++
+pb_rewind	.\TinyFrame-master\utilities\payload_builder.h	68;"	d	language:C++
+pb_start	.\TinyFrame-master\utilities\payload_builder.h	60;"	d	language:C++
+pb_start_be	.\TinyFrame-master\utilities\payload_builder.h	54;"	d	language:C++
+pb_start_e	.\TinyFrame-master\utilities\payload_builder.h	51;"	d	language:C++
+pb_start_le	.\TinyFrame-master\utilities\payload_builder.h	57;"	d	language:C++
+pb_string	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_string(PayloadBuilder *pb, const char *str)$/;"	f	language:C	signature:(PayloadBuilder *pb, const char *str)
+pb_u16	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_u16(PayloadBuilder *pb, uint16_t word)$/;"	f	language:C	signature:(PayloadBuilder *pb, uint16_t word)
+pb_u32	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_u32(PayloadBuilder *pb, uint32_t word)$/;"	f	language:C	signature:(PayloadBuilder *pb, uint32_t word)
+pb_u8	.\TinyFrame-master\utilities\payload_builder.c	/^bool pb_u8(PayloadBuilder *pb, uint8_t byte)$/;"	f	language:C	signature:(PayloadBuilder *pb, uint8_t byte)
+peer_bit	.\TinyFrame-master\TinyFrame.h	/^    TF_Peer peer_bit;       \/\/!< Own peer bit (unqiue to avoid msg ID clash)$/;"	m	language:C++	struct:TinyFrame_
+pp_bool	.\TinyFrame-master\utilities\payload_parser.h	/^static inline int8_t pp_bool(PayloadParser *pp)$/;"	f	language:C++	signature:(PayloadParser *pp)
+pp_buf	.\TinyFrame-master\utilities\payload_parser.c	/^uint32_t pp_buf(PayloadParser *pp, uint8_t *buffer, uint32_t maxlen)$/;"	f	language:C	signature:(PayloadParser *pp, uint8_t *buffer, uint32_t maxlen)
+pp_char	.\TinyFrame-master\utilities\payload_parser.h	/^static inline int8_t pp_char(PayloadParser *pp)$/;"	f	language:C++	signature:(PayloadParser *pp)
+pp_check_capacity	.\TinyFrame-master\utilities\payload_parser.c	3;"	d	language:C	file:
+pp_empty_handler	.\TinyFrame-master\utilities\payload_parser.h	/^typedef bool (*pp_empty_handler)(PayloadParser *pp, uint32_t needed);$/;"	t	language:C++
+pp_float	.\TinyFrame-master\utilities\payload_parser.c	/^float pp_float(PayloadParser *pp)$/;"	f	language:C	signature:(PayloadParser *pp)
+pp_i16	.\TinyFrame-master\utilities\payload_parser.c	/^int16_t pp_i16(PayloadParser *pp)$/;"	f	language:C	signature:(PayloadParser *pp)
+pp_i32	.\TinyFrame-master\utilities\payload_parser.c	/^int32_t pp_i32(PayloadParser *pp)$/;"	f	language:C	signature:(PayloadParser *pp)
+pp_i8	.\TinyFrame-master\utilities\payload_parser.c	/^int8_t pp_i8(PayloadParser *pp)$/;"	f	language:C	signature:(PayloadParser *pp)
+pp_length	.\TinyFrame-master\utilities\payload_parser.h	69;"	d	language:C++
+pp_rewind	.\TinyFrame-master\utilities\payload_parser.h	72;"	d	language:C++
+pp_skip	.\TinyFrame-master\utilities\payload_parser.c	/^void pp_skip(PayloadParser *pp, uint32_t num)$/;"	f	language:C	signature:(PayloadParser *pp, uint32_t num)
+pp_start	.\TinyFrame-master\utilities\payload_parser.h	64;"	d	language:C++
+pp_start_be	.\TinyFrame-master\utilities\payload_parser.h	58;"	d	language:C++
+pp_start_e	.\TinyFrame-master\utilities\payload_parser.h	55;"	d	language:C++
+pp_start_le	.\TinyFrame-master\utilities\payload_parser.h	61;"	d	language:C++
+pp_string	.\TinyFrame-master\utilities\payload_parser.c	/^uint32_t pp_string(PayloadParser *pp, char *buffer, uint32_t maxlen)$/;"	f	language:C	signature:(PayloadParser *pp, char *buffer, uint32_t maxlen)
+pp_tail	.\TinyFrame-master\utilities\payload_parser.c	/^const uint8_t *pp_tail(PayloadParser *pp, uint32_t *length)$/;"	f	language:C	signature:(PayloadParser *pp, uint32_t *length)
+pp_u16	.\TinyFrame-master\utilities\payload_parser.c	/^uint16_t pp_u16(PayloadParser *pp)$/;"	f	language:C	signature:(PayloadParser *pp)
+pp_u32	.\TinyFrame-master\utilities\payload_parser.c	/^uint32_t pp_u32(PayloadParser *pp)$/;"	f	language:C	signature:(PayloadParser *pp)
+pp_u8	.\TinyFrame-master\utilities\payload_parser.c	/^uint8_t pp_u8(PayloadParser *pp)$/;"	f	language:C	signature:(PayloadParser *pp)
+pu8	.\TinyFrame-master\demo\utils.h	/^typedef unsigned char* pu8;$/;"	t	language:C++
+ref_cksum	.\TinyFrame-master\TinyFrame.h	/^    TF_CKSUM ref_cksum;     \/\/!< Reference checksum read from the message$/;"	m	language:C++	struct:TinyFrame_
+renew_id_listener	.\TinyFrame-master\TinyFrame.c	/^static inline void _TF_FN renew_id_listener(struct TF_IdListener_ *lst)$/;"	f	language:C	file:	signature:(struct TF_IdListener_ *lst)
+replyListener	.\TinyFrame-master\demo\socket_demo\slave.c	/^TF_Result replyListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+romeo	.\TinyFrame-master\demo\simple_long_payload\test.c	/^const char *romeo = "THE TRAGEDY OF ROMEO AND JULIET\\n"$/;"	v	language:C
+romeo	.\TinyFrame-master\demo\simple_multipart\test.c	/^const char *romeo = "THE TRAGEDY OF ROMEO AND JULIET\\n"$/;"	v	language:C
+rxi	.\TinyFrame-master\TinyFrame.h	/^    TF_LEN rxi;             \/\/!< Field size byte counter$/;"	m	language:C++	struct:TinyFrame_
+sendbuf	.\TinyFrame-master\TinyFrame.h	/^    uint8_t sendbuf[TF_SENDBUF_LEN]; \/\/!< Transmit temporary buffer$/;"	m	language:C++	struct:TinyFrame_
+signal_handler	.\TinyFrame-master\demo\demo.c	/^static void signal_handler(int sig)$/;"	f	language:C	file:	signature:(int sig)
+sockfd	.\TinyFrame-master\demo\demo.c	/^volatile int sockfd = -1;$/;"	v	language:C
+soft_lock	.\TinyFrame-master\TinyFrame.h	/^    bool soft_lock;         \/\/!< Tx lock flag used if the mutex feature is not enabled.$/;"	m	language:C++	struct:TinyFrame_
+start	.\TinyFrame-master\utilities\payload_builder.h	/^    uint8_t *start;   \/\/!< Pointer to the beginning of the buffer$/;"	m	language:C++	struct:PayloadBuilder_
+start	.\TinyFrame-master\utilities\payload_parser.h	/^    uint8_t *start;   \/\/!< Pointer to the beginning of the buffer$/;"	m	language:C++	struct:PayloadParser_
+state	.\TinyFrame-master\TinyFrame.h	/^    enum TF_State_ state;$/;"	m	language:C++	struct:TinyFrame_	typeref:enum:TinyFrame_::TF_State_
+testGenericListener	.\TinyFrame-master\demo\socket_demo\master.c	/^TF_Result testGenericListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+testIdListener	.\TinyFrame-master\demo\simple\test.c	/^TF_Result testIdListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+testIdListener	.\TinyFrame-master\demo\simple_custom_cksum\test.c	/^TF_Result testIdListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+testIdListener	.\TinyFrame-master\demo\socket_demo\master.c	/^TF_Result testIdListener(TinyFrame *tf, TF_Msg *msg)$/;"	f	language:C	signature:(TinyFrame *tf, TF_Msg *msg)
+timeout	.\TinyFrame-master\TinyFrame.h	/^    TF_TICKS timeout;     \/\/ nr of ticks remaining to disable this listener$/;"	m	language:C++	struct:TF_IdListener_
+timeout_max	.\TinyFrame-master\TinyFrame.h	/^    TF_TICKS timeout_max; \/\/ the original timeout is stored here (0 = no timeout)$/;"	m	language:C++	struct:TF_IdListener_
+tx_cksum	.\TinyFrame-master\TinyFrame.h	/^    TF_CKSUM tx_cksum;      \/\/!< Transmit checksum accumulator$/;"	m	language:C++	struct:TinyFrame_
+tx_len	.\TinyFrame-master\TinyFrame.h	/^    uint32_t tx_len;        \/\/!< Total expected Tx length$/;"	m	language:C++	struct:TinyFrame_
+tx_pos	.\TinyFrame-master\TinyFrame.h	/^    uint32_t tx_pos;        \/\/!< Next write position in the Tx buffer (used for multipart)$/;"	m	language:C++	struct:TinyFrame_
+type	.\TinyFrame-master\TinyFrame.h	/^    TF_TYPE type;           \/\/!< Collected message type number$/;"	m	language:C++	struct:TinyFrame_
+type	.\TinyFrame-master\TinyFrame.h	/^    TF_TYPE type;         \/\/!< received or sent message type$/;"	m	language:C++	struct:TF_Msg_
+type	.\TinyFrame-master\TinyFrame.h	/^    TF_TYPE type;$/;"	m	language:C++	struct:TF_TypeListener_
+type_listeners	.\TinyFrame-master\TinyFrame.h	/^    struct TF_TypeListener_ type_listeners[TF_MAX_TYPE_LST];$/;"	m	language:C++	struct:TinyFrame_	typeref:struct:TinyFrame_::TF_TypeListener_
+u16	.\TinyFrame-master\utilities\type_coerce.h	/^    uint16_t u16;$/;"	m	language:C++	union:conv16
+u32	.\TinyFrame-master\utilities\type_coerce.h	/^    uint32_t u32;$/;"	m	language:C++	union:conv32
+u8	.\TinyFrame-master\utilities\type_coerce.h	/^    uint8_t u8;$/;"	m	language:C++	union:conv8
+userdata	.\TinyFrame-master\TinyFrame.h	/^    void *userdata;$/;"	m	language:C++	struct:TF_IdListener_
+userdata	.\TinyFrame-master\TinyFrame.h	/^    void *userdata;$/;"	m	language:C++	struct:TF_Msg_
+userdata	.\TinyFrame-master\TinyFrame.h	/^    void *userdata;$/;"	m	language:C++	struct:TinyFrame_
+userdata2	.\TinyFrame-master\TinyFrame.h	/^    void *userdata2;$/;"	m	language:C++	struct:TF_IdListener_
+userdata2	.\TinyFrame-master\TinyFrame.h	/^    void *userdata2;$/;"	m	language:C++	struct:TF_Msg_
+usertag	.\TinyFrame-master\TinyFrame.h	/^    uint32_t usertag;$/;"	m	language:C++	struct:TinyFrame_
