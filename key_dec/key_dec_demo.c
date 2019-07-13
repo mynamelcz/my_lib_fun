@@ -51,13 +51,12 @@ static void key_scan_isr_loop(void)
 	key_state_detect(Key_hd(KEY_SCAN_NAME));
 	GetKeyMsg(KEY_SCAN_NAME,key_id,key_state);
 	if(key_id != __NO_KEY){
-      k_val.key_id =  key_id;
-			k_val.state  =  key_state;
-
-		  ret = key_val_put(&k_val);
-		  if(ret == 0){
-				ERR_printf(ret);
-			}
+		k_val.key_id =  key_id;
+		k_val.state  =  key_state;
+		ret = key_val_put(&k_val);
+		if(ret == 0){
+			ERR_printf(ret);
+		}
 	}
 }
 

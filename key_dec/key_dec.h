@@ -7,8 +7,8 @@
 
 
 #define DOUBLE_KEY_EN       0
-#define LONG_KEY_EN					0
-#define REPEAT_KEY_EN				0
+#define LONG_KEY_EN			0
+#define REPEAT_KEY_EN		0
 
 
 
@@ -32,11 +32,11 @@ typedef enum _key_msg{
 typedef struct _key_status{
     u8 c_val;         		//当前键值  
     u8 b_val;         		//上一次的键值
-    u8 msg_keynum;
+    u8 msg_keynum;			//按键 ID
     u16 count;           	//计数器    
-    u16 double_key_cnt;  	//double key间隔  
+    u16 double_key_cnt;  	//double key间隔   
     key_msg_e msg_state; 	//
-	  key_msg_e key_state;		
+	key_msg_e key_state;		
     u8(*get_key_val)(void);
 }key_status_t; 
 
