@@ -2,17 +2,21 @@
 #define __KEY_DEC_H
 #include "includes.h"
 #include "key.h"
-#define __NO_KEY  NO_KEY
+#define __NO_KEY  0xFF
 
 
 
-#define DOUBLE_KEY_EN       1
+#define DOUBLE_KEY_EN       0
+#define LONG_KEY_EN					0
+#define REPEAT_KEY_EN				0
 
-#define KEY_FILTER_TIME     5      //按键消抖时间 10ms
-#define KEY_LONG_TIME       400    //按键长按时间 2s
-#define KEY_REPEAT_TIME     (KEY_LONG_TIME+100)     
-#define KEY_DOUBLE_MIN      10     //双击按键最小间隔 100ms
-#define KEY_DOUBLE_MAX      350     //双击按键最大间隔 300ms
+
+
+#define KEY_FILTER_TIME     5      //按键消抖时间 
+#define KEY_LONG_TIME       80    //按键长按时间 
+#define KEY_REPEAT_TIME     (KEY_LONG_TIME+10)     
+#define KEY_DOUBLE_MIN      10     //双击按键最小间隔 
+#define KEY_DOUBLE_MAX      30     //双击按键最大间隔 
 
 
 typedef enum _key_msg{
@@ -32,7 +36,7 @@ typedef struct _key_status{
     u16 count;           	//计数器    
     u16 double_key_cnt;  	//double key间隔  
     key_msg_e msg_state; 	//
-	key_msg_e key_state;		
+	  key_msg_e key_state;		
     u8(*get_key_val)(void);
 }key_status_t; 
 
@@ -59,9 +63,9 @@ void key_state_detect(key_status_t *skey_t);
 #define Key_hd(fun_name)	(&key_##fun_name)
 #define Def_Key_Scan(fun_name) \
 key_status_t key_##fun_name = \
-{NO_KEY, \
- NO_KEY, \
- NO_KEY, \
+{__NO_KEY, \
+ __NO_KEY, \
+ __NO_KEY, \
  0,\
  0,\
  KEY_NULL,\
