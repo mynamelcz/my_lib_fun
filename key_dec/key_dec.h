@@ -55,8 +55,7 @@ void key_state_detect(key_status_t *skey_t);
  do{                                                \
     key_val   = key_##fun_name.msg_keynum;       \
     key_state = key_##fun_name.msg_state;   \
-    if(key_state != KEY_NULL)               \
-		key_##fun_name.msg_keynum = __NO_KEY;    \
+	key_##fun_name.msg_keynum = __NO_KEY;    \
     key_##fun_name.msg_state = KEY_NULL;    \
  }while(0)
 
