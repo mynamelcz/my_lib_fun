@@ -5,6 +5,7 @@
 #define __NO_KEY  0xFF
 
 
+#define KEY_DEC_LOOP_TIME	10	//ms
 
 #define DOUBLE_KEY_EN       0
 #define LONG_KEY_EN			0
@@ -12,11 +13,11 @@
 
 
 
-#define KEY_FILTER_TIME     5      //按键消抖时间 
-#define KEY_LONG_TIME       80    //按键长按时间 
-#define KEY_REPEAT_TIME     (KEY_LONG_TIME+10)     
-#define KEY_DOUBLE_MIN      10     //双击按键最小间隔 
-#define KEY_DOUBLE_MAX      30     //双击按键最大间隔 
+#define KEY_FILTER_TIME     (50   / KEY_DEC_LOOP_TIME)   //按键消抖时间  ms
+#define KEY_LONG_TIME       (1000 / KEY_DEC_LOOP_TIME)   //按键长按时间  ms
+#define KEY_REPEAT_TIME     (100  / KEY_DEC_LOOP_TIME + KEY_LONG_TIME)     
+#define KEY_DOUBLE_MIN      (100  / KEY_DEC_LOOP_TIME)     //双击按键最小间隔 
+#define KEY_DOUBLE_MAX      (300  / KEY_DEC_LOOP_TIME)     //双击按键最大间隔 
 
 
 typedef enum _key_msg{
