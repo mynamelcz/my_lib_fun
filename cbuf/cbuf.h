@@ -8,6 +8,7 @@ struct cbuf_t
  unsigned int   size;            //循环buffer空间大小
  unsigned int   in;              //输入数据偏移索引
  unsigned int   out;             //输出数据偏移索引
+ unsigned int   mutex;
 };
 
 
